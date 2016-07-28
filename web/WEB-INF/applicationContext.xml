@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+    <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl"
+                  value="jdbc:mysql://localhost:3306/cpn2025db?useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="user" value="root"/>
+        <property name="password" value="bhit414"/>
+        <property name="idleConnectionTestPeriod" value="28000"></property>
+    </bean>
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>com/wnwl/CPN2025/bhh/AlarmPush.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/AlarmPushIgnore.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/CameraCurise.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/CameraInfo.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/CameraPosi.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/DType.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/DataInvalid.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/DepCons.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/DepOper.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/DepSupe.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormCaliNoise.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormCaliFlow.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormCaliPm.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormCommCheck.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormDataCheck.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormDevChange.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormDevClean.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormDevFault.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormDevMove.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormDevRepair.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormFeedback.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormNoiseData.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormPollDay.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormPollMonth.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormPollWeek.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormPollYear.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormQualCheck.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/FormTraceVal.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/LogLogin.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/LogOper.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/LogOperCont.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/LogShow.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/PmState.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/PrivActor.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/PrivActorNode.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/PrivActorUser.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordAlarm.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordAlarmPush.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordData.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordDataBackup.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordDataImport.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordDebug.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordNoise.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordOffline.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RecordPhoto.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RegAlarmOver.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RegAlarmTrend.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RegInfo.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/RegParam.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/TreeNode.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/UserDetail.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/UserInfo.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/VersionInfo.hbm.xml</value>
+                <value>com/wnwl/CPN2025/bhh/SystemInfo.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect = org.hibernate.dialect.MySQLDialect
+                hibernate.show_sql = false;
+            </value>
+        </property>
+    </bean>
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--define pojo -->
+    <bean id="alarmPush" class="com.wnwl.CPN2025.bhh.AlarmPush"/>
+    <bean id="alarmPushIgnore" class="com.wnwl.CPN2025.bhh.AlarmPushIgnore"/>
+    <bean id="cameraCurise" class="com.wnwl.CPN2025.bhh.CameraCurise"/>
+    <bean id="cameraInfo" class="com.wnwl.CPN2025.bhh.CameraInfo"/>
+    <bean id="cameraPosi" class="com.wnwl.CPN2025.bhh.CameraPosi"/>
+    <bean id="dType" class="com.wnwl.CPN2025.bhh.DType"/>
+    <bean id="dataInvalid" class="com.wnwl.CPN2025.bhh.DataInvalid"/>
+    <bean id="depCons" class="com.wnwl.CPN2025.bhh.DepCons"/>
+    <bean id="depOper" class="com.wnwl.CPN2025.bhh.DepOper"/>
+    <bean id="depSupe" class="com.wnwl.CPN2025.bhh.DepSupe"/>
+    <bean id="formCaliNoise" class="com.wnwl.CPN2025.bhh.FormCaliNoise"/>
+    <bean id="formCaliFlow" class="com.wnwl.CPN2025.bhh.FormCaliFlow"/>
+    <bean id="formCaliPm" class="com.wnwl.CPN2025.bhh.FormCaliPm"/>
+    <bean id="formCommCheck" class="com.wnwl.CPN2025.bhh.FormCommCheck"/>
+    <bean id="formDataCheck" class="com.wnwl.CPN2025.bhh.FormDataCheck"/>
+    <bean id="formDevChange" class="com.wnwl.CPN2025.bhh.FormDevChange"/>
+    <bean id="formDevClean" class="com.wnwl.CPN2025.bhh.FormDevClean"/>
+    <bean id="formDevFault" class="com.wnwl.CPN2025.bhh.FormDevFault"/>
+    <bean id="formDevMove" class="com.wnwl.CPN2025.bhh.FormDevMove"/>
+    <bean id="formDevRepair" class="com.wnwl.CPN2025.bhh.FormDevRepair"/>
+    <bean id="formFeedback" class="com.wnwl.CPN2025.bhh.FormFeedback"/>
+    <bean id="formNoiseData" class="com.wnwl.CPN2025.bhh.FormNoiseData"/>
+    <bean id="formPollDay" class="com.wnwl.CPN2025.bhh.FormPollDay"/>
+    <bean id="formPollMonth" class="com.wnwl.CPN2025.bhh.FormPollMonth"/>
+    <bean id="formPollWeek" class="com.wnwl.CPN2025.bhh.FormPollWeek"/>
+    <bean id="formPollYear" class="com.wnwl.CPN2025.bhh.FormPollYear"/>
+    <bean id="formQualCheck" class="com.wnwl.CPN2025.bhh.FormQualCheck"/>
+    <bean id="formTraceVal" class="com.wnwl.CPN2025.bhh.FormTraceVal"/>
+    <bean id="logLogin" class="com.wnwl.CPN2025.bhh.LogLogin"/>
+    <bean id="logOper" class="com.wnwl.CPN2025.bhh.LogOper"/>
+    <bean id="logOperCont" class="com.wnwl.CPN2025.bhh.LogOperCont"/>
+    <bean id="logShow" class="com.wnwl.CPN2025.bhh.LogShow"/>
+    <bean id="pmState" class="com.wnwl.CPN2025.bhh.PmState"/>
+    <bean id="privActor" class="com.wnwl.CPN2025.bhh.PrivActor"/>
+    <bean id="privActorNode" class="com.wnwl.CPN2025.bhh.PrivActorNode"/>
+    <bean id="privActorUser" class="com.wnwl.CPN2025.bhh.PrivActorUser"/>
+    <bean id="recordAlarm" class="com.wnwl.CPN2025.bhh.RecordAlarm"/>
+    <bean id="recordAlarmPush" class="com.wnwl.CPN2025.bhh.RecordAlarmPush"/>
+    <bean id="recordData" class="com.wnwl.CPN2025.bhh.RecordData"/>
+    <bean id="recordDataBackup" class="com.wnwl.CPN2025.bhh.RecordDataBackup"/>
+    <bean id="recordDataImport" class="com.wnwl.CPN2025.bhh.RecordDataImport"/>
+    <bean id="recordDebug" class="com.wnwl.CPN2025.bhh.RecordDebug"/>
+    <bean id="recordNoise" class="com.wnwl.CPN2025.bhh.RecordNoise"/>
+    <bean id="recordOffline" class="com.wnwl.CPN2025.bhh.RecordOffline"/>
+    <bean id="recordPhoto" class="com.wnwl.CPN2025.bhh.RecordPhoto"/>
+    <bean id="regAlarmOver" class="com.wnwl.CPN2025.bhh.RegAlarmOver"/>
+    <bean id="regAlarmTrend" class="com.wnwl.CPN2025.bhh.RegAlarmTrend"/>
+    <bean id="regInfo" class="com.wnwl.CPN2025.bhh.RegInfo"/>
+    <bean id="regParam" class="com.wnwl.CPN2025.bhh.RegParam"/>
+    <bean id="treeNode" class="com.wnwl.CPN2025.bhh.TreeNode"/>
+    <bean id="userDetail" class="com.wnwl.CPN2025.bhh.UserDetail"/>
+    <bean id="userInfo" class="com.wnwl.CPN2025.bhh.UserInfo"/>
+    <bean id="versionInfo" class="com.wnwl.CPN2025.bhh.VersionInfo"/>
+    <bean id="systemInfo" class="com.wnwl.CPN2025.bhh.SystemInfo"/>
+    <!--define Dao -->
+    <bean id="myHibernatetemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="alarmPushDAO" class="com.wnwl.CPN2025.hdao.impl.AlarmPushDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="alarmPushIgnoreDAO" class="com.wnwl.CPN2025.hdao.impl.AlarmPushIgnoreDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="cameraCuriseDAO" class="com.wnwl.CPN2025.hdao.impl.CameraCuriseDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="cameraInfoDAO" class="com.wnwl.CPN2025.hdao.impl.CameraInfoDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="cameraPosiDAO" class="com.wnwl.CPN2025.hdao.impl.CameraPosiDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="dTypeDAO" class="com.wnwl.CPN2025.hdao.impl.DTypeDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="dataInvalidDAO" class="com.wnwl.CPN2025.hdao.impl.DataInvalidDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="depConsDAO" class="com.wnwl.CPN2025.hdao.impl.DepConsDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="depOperDAO" class="com.wnwl.CPN2025.hdao.impl.DepOperDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="depSupeDAO" class="com.wnwl.CPN2025.hdao.impl.DepSupeDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formCaliNoiseDAO" class="com.wnwl.CPN2025.hdao.impl.FormCaliNoiseDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formCaliFlowDAO" class="com.wnwl.CPN2025.hdao.impl.FormCaliFlowDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formCaliPmDAO" class="com.wnwl.CPN2025.hdao.impl.FormCaliPmDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formCommCheckDAO" class="com.wnwl.CPN2025.hdao.impl.FormCommCheckDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formDataCheckDAO" class="com.wnwl.CPN2025.hdao.impl.FormDataCheckDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formDevChangeDAO" class="com.wnwl.CPN2025.hdao.impl.FormDevChangeDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formDevCleanDAO" class="com.wnwl.CPN2025.hdao.impl.FormDevCleanDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formDevFaultDAO" class="com.wnwl.CPN2025.hdao.impl.FormDevFaultDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formDevMoveDAO" class="com.wnwl.CPN2025.hdao.impl.FormDevMoveDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formDevRepairDAO" class="com.wnwl.CPN2025.hdao.impl.FormDevRepairDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formFeedbackDAO" class="com.wnwl.CPN2025.hdao.impl.FormFeedbackDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formNoiseDataDAO" class="com.wnwl.CPN2025.hdao.impl.FormNoiseDataDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formPollDayDAO" class="com.wnwl.CPN2025.hdao.impl.FormPollDayDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formPollMonthDAO" class="com.wnwl.CPN2025.hdao.impl.FormPollMonthDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formPollWeekDAO" class="com.wnwl.CPN2025.hdao.impl.FormPollWeekDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formPollYearDAO" class="com.wnwl.CPN2025.hdao.impl.FormPollYearDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formQualCheckDAO" class="com.wnwl.CPN2025.hdao.impl.FormQualCheckDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="formTraceValDAO" class="com.wnwl.CPN2025.hdao.impl.FormTraceValDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="logLoginDAO" class="com.wnwl.CPN2025.hdao.impl.LogLoginDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="logOperDAO" class="com.wnwl.CPN2025.hdao.impl.LogOperDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="logOperContDAO" class="com.wnwl.CPN2025.hdao.impl.LogOperContDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="logShowDAO" class="com.wnwl.CPN2025.hdao.impl.LogShowDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="pmStateDAO" class="com.wnwl.CPN2025.hdao.impl.PmStateDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="privActorDAO" class="com.wnwl.CPN2025.hdao.impl.PrivActorDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="privActorNodeDAO" class="com.wnwl.CPN2025.hdao.impl.PrivActorNodeDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="privActorUserDAO" class="com.wnwl.CPN2025.hdao.impl.PrivActorUserDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordAlarmDAO" class="com.wnwl.CPN2025.hdao.impl.RecordAlarmDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordAlarmPushDAO" class="com.wnwl.CPN2025.hdao.impl.RecordAlarmPushDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordDataDAO" class="com.wnwl.CPN2025.hdao.impl.RecordDataDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordDataBackupDAO" class="com.wnwl.CPN2025.hdao.impl.RecordDataBackupDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordDataImportDAO" class="com.wnwl.CPN2025.hdao.impl.RecordDataImportDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordDebugDAO" class="com.wnwl.CPN2025.hdao.impl.RecordDebugDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordNoiseDAO" class="com.wnwl.CPN2025.hdao.impl.RecordNoiseDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordOfflineDAO" class="com.wnwl.CPN2025.hdao.impl.RecordOfflineDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="recordPhotoDAO" class="com.wnwl.CPN2025.hdao.impl.RecordPhotoDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="regAlarmOverDAO" class="com.wnwl.CPN2025.hdao.impl.RegAlarmOverDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="regAlarmTrendDAO" class="com.wnwl.CPN2025.hdao.impl.RegAlarmTrendDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="regInfoDAO" class="com.wnwl.CPN2025.hdao.impl.RegInfoDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="regParamDAO" class="com.wnwl.CPN2025.hdao.impl.RegParamDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="treeNodeDAO" class="com.wnwl.CPN2025.hdao.impl.TreeNodeDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="userDetailDAO" class="com.wnwl.CPN2025.hdao.impl.UserDetailDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="userInfoDAO" class="com.wnwl.CPN2025.hdao.impl.UserInfoDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="versionInfoDAO" class="com.wnwl.CPN2025.hdao.impl.VersionInfoDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <bean id="systemInfoDAO" class="com.wnwl.CPN2025.hdao.impl.SystemInfoDAOImpl">
+        <property name="hibernateTemplate" ref="myHibernatetemplate"/>
+    </bean>
+    <!--define TransactionInterceptor -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="query*"/>
+            <tx:method name="*" propagation="REQUIRED"/>
+            <tx:method name="get*" read-only="false" propagation="NOT_SUPPORTED"/>
+            <tx:method name="find*" read-only="false" propagation="NOT_SUPPORTED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="businessService" expression="execution(* com.wnwl.CPN2025.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="businessService"/>
+    </aop:config>
+    <bean id="chatMessageClient" class="com.wnwl.CPN2025.dwr.ChatMessageClient"/>
+    <bean id="chatService" class="com.wnwl.CPN2025.dwr.ChatService"/>
+    <!--define Services -->
+    <bean id="alarmService" class="com.wnwl.CPN2025.service.impl.AlarmServiceImpl">
+        <property name="recordAlarmDAO" ref="recordAlarmDAO"/>
+        <property name="recordAlarmPushDAO" ref="recordAlarmPushDAO"/>
+        <property name="recordNoiseDAO" ref="recordNoiseDAO"/>
+        <property name="recordPhotoDAO" ref="recordPhotoDAO"/>
+        <property name="recordOfflineDAO" ref="recordOfflineDAO"/>
+        <property name="baseDAO" ref="recordAlarmDAO"/>
+    </bean>
+    <bean id="analyseService" class="com.wnwl.CPN2025.service.impl.AnalyseServiceImpl">
+        <property name="recordDataDAO" ref="recordDataDAO"/>
+        <property name="recordOfflineDAO" ref="recordOfflineDAO"/>
+        <property name="regInfoDAO" ref="regInfoDAO"/>
+        <property name="baseDAO" ref="recordDataDAO"/>
+    </bean>
+    <bean id="databaseService" class="com.wnwl.CPN2025.service.impl.DatabaseServiceImpl">
+        <property name="recordDataDAO" ref="recordDataDAO"/>
+        <property name="recordDataBackupDAO" ref="recordDataBackupDAO"/>
+        <property name="recordDataImportDAO" ref="recordDataImportDAO"/>
+        <property name="baseDAO" ref="recordDataDAO"/>
+    </bean>
+    <bean id="dataPushService" class="com.wnwl.CPN2025.service.impl.DataPushServiceImpl">
+        <property name="recordAlarmDAO" ref="recordAlarmDAO"/>
+        <property name="recordAlarmPushDAO" ref="recordAlarmPushDAO"/>
+        <property name="alarmPushDAO" ref="alarmPushDAO"/>
+        <property name="alarmPushIgnoreDAO" ref="alarmPushIgnoreDAO"/>
+        <property name="baseDAO" ref="recordAlarmDAO"/>
+    </bean>
+    <bean id="logService" class="com.wnwl.CPN2025.service.impl.LogServiceImpl">
+        <property name="logLoginDAO" ref="logLoginDAO"/>
+        <property name="logShowDAO" ref="logShowDAO"/>
+        <property name="logOperDAO" ref="logOperDAO"/>
+        <property name="logOperContDAO" ref="logOperContDAO"/>
+        <property name="baseDAO" ref="logLoginDAO"/>
+    </bean>
+    <bean id="monitorService" class="com.wnwl.CPN2025.service.impl.MonitorServiceImpl">
+        <property name="regInfoDAO" ref="regInfoDAO"/>
+        <property name="cameraInfoDAO" ref="cameraInfoDAO"/>
+        <property name="cameraCuriseDAO" ref="cameraCuriseDAO"/>
+        <property name="cameraPosiDAO" ref="cameraPosiDAO"/>
+        <property name="baseDAO" ref="regInfoDAO"/>
+    </bean>
+    <bean id="operationService" class="com.wnwl.CPN2025.service.impl.OperationServiceImpl">
+        <property name="formCaliNoiseDAO" ref="formCaliNoiseDAO"/>
+        <property name="formNoiseDataDAO" ref="formNoiseDataDAO"/>
+        <property name="formCaliFlowDAO" ref="formCaliFlowDAO"/>
+        <property name="formCaliPmDAO" ref="formCaliPmDAO"/>
+        <property name="formCommCheckDAO" ref="formCommCheckDAO"/>
+        <property name="formDataCheckDAO" ref="formDataCheckDAO"/>
+        <property name="formDevChangeDAO" ref="formDevChangeDAO"/>
+        <property name="formDevCleanDAO" ref="formDevCleanDAO"/>
+        <property name="formDevFaultDAO" ref="formDevFaultDAO"/>
+        <property name="formDevMoveDAO" ref="formDevMoveDAO"/>
+        <property name="formDevRepairDAO" ref="formDevRepairDAO"/>
+        <property name="formFeedbackDAO" ref="formFeedbackDAO"/>
+        <property name="formPollDayDAO" ref="formPollDayDAO"/>
+        <property name="formPollMonthDAO" ref="formPollMonthDAO"/>
+        <property name="formPollWeekDAO" ref="formPollWeekDAO"/>
+        <property name="formPollYearDAO" ref="formPollYearDAO"/>
+        <property name="formQualCheckDAO" ref="formQualCheckDAO"/>
+        <property name="formTraceValDAO" ref="formTraceValDAO"/>
+        <property name="baseDAO" ref="formCaliNoiseDAO"/>
+    </bean>
+    <bean id="regConditionService" class="com.wnwl.CPN2025.service.impl.RegServiceImpl">
+        <property name="regInfoDAO" ref="regInfoDAO"/>
+        <property name="regParamDAO" ref="regParamDAO"/>
+        <property name="regAlarmOverDAO" ref="regAlarmOverDAO"/>
+        <property name="regAlarmTrendDAO" ref="regAlarmTrendDAO"/>
+        <property name="pmStateDAO" ref="pmStateDAO"/>
+        <property name="dataInvalidDAO" ref="dataInvalidDAO"/>
+        <property name="baseDAO" ref="regInfoDAO"/>
+    </bean>
+    <bean id="rtMonitorService" class="com.wnwl.CPN2025.service.impl.RTMonitorServiceImpl">
+        <property name="regInfoDAO" ref="regInfoDAO"/>
+        <property name="regParamDAO" ref="regParamDAO"/>
+        <property name="depConsDAO" ref="depConsDAO"/>
+        <property name="baseDAO" ref="regInfoDAO"/>
+    </bean>
+    <bean id="systemService" class="com.wnwl.CPN2025.service.impl.SystemServiceImpl">
+        <property name="dTypeDAO" ref="dTypeDAO"/>
+        <property name="treeNodeDAO" ref="treeNodeDAO"/>
+        <property name="versionInfoDAO" ref="versionInfoDAO"/>
+        <property name="systemInfoDAO" ref="systemInfoDAO"/>
+        <property name="baseDAO" ref="dTypeDAO"/>
+    </bean>
+    <bean id="userService" class="com.wnwl.CPN2025.service.impl.UserServiceImpl">
+        <property name="depConsDAO" ref="depConsDAO"/>
+        <property name="depSupeDAO" ref="depSupeDAO"/>
+        <property name="depOperDAO" ref="depOperDAO"/>
+        <property name="userInfoDAO" ref="userInfoDAO"/>
+        <property name="userDetailDAO" ref="userDetailDAO"/>
+        <property name="privActorDAO" ref="privActorDAO"/>
+        <property name="privActorNodeDAO" ref="privActorNodeDAO"/>
+        <property name="privActorUserDAO" ref="privActorUserDAO"/>
+        <property name="baseDAO" ref="depConsDAO"/>
+    </bean>
+
+    <!--<bean id="dayTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="DatabaseAction" />
+		<property name="targetMethod" value="autoBackUpDay" />
+		<property name="concurrent" value="false" />
+	</bean> 
+	<bean id="monthTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">   
+		<property name="targetObject" ref="DatabaseAction" />
+		<property name="targetMethod" value="autoBackUpMonth" />
+		<property name="concurrent" value="false" />
+	</bean>
+	<bean id="switchTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="regConditionService" />
+		<property name="targetMethod" value="switchUpdate" />
+		<property name="concurrent" value="false" />
+	</bean
+    <bean id="dayTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">   
+    	<property name="jobDetail" ref="dayTask" />
+    	<property name="cronExpression" value="0 18 13 * * ?" />	 每月2号到月末凌晨2点自动备份数据
+    </bean>
+    <bean id="monthTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">   
+        <property name="jobDetail" ref="monthTask" />
+        <property name="cronExpression" value="0 0 2 1 * ?" />		 每月初自动备份数据
+    </bean>
+	<bean id="switchTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="switchTask" />
+		<property name="cronExpression" value="0 0 */1 * * ?" />		每小时自动更新开关量状态
+	</bean>
+    <bean autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">  
+        <property name="triggers">
+            <list>
+            	<ref local="dayTrigger" />
+            	<ref local="monthTrigger" />
+				<ref local="switchTrigger" />
+            </list>
+        </property> 
+     </bean>-->
+    <!--define other generalized class -->
+    <bean id="encyp" class="com.wnwl.CPN2025.util.Encyptions" scope="prototype">
+    </bean>
+
+    <!--configure struts2 action as bean in spring -->
+    <bean id="tdsarray" class="com.wnwl.CPN2025.util.TdsArray" scope="prototype">
+    </bean>
+    <bean id="StartListener" class="com.wnwl.CPN2025.util.StartListener" scope="prototype"></bean>
+    <bean id="LoginAction" class="com.wnwl.CPN2025.action.LoginAction" scope="prototype">
+        <property name="userService" ref="userService"/>
+    </bean>
+    <bean id="ChartAction" class="com.wnwl.CPN2025.action.ChartAction" scope="prototype">
+        <property name="rtMonitorService" ref="rtMonitorService"/>
+    </bean>
+    <bean id="MenuAction" class="com.wnwl.CPN2025.action.MenuAction" scope="prototype">
+        <property name="systemService" ref="systemService"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+    <bean id="MonitorAction" class="com.wnwl.CPN2025.action.MonitorAction" scope="prototype">
+        <property name="monitorService" ref="monitorService"/>
+    </bean>
+</beans>

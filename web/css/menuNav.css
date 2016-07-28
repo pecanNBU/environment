@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+#navMenu ul, li, blockquote {
+    PADDING: 0px;
+    MARGIN: 0px;
+}
+
+#navMenu a {
+    COLOR: #105b49;
+    TEXT-DECORATION: none;
+    outline: none
+}
+
+#navMenu a:hover {
+    COLOR: #0a382d;
+    TEXT-DECORATION: underline
+}
+
+#navMenu .clear {
+    width: 100%;
+    height: 0px;
+    line-height: 1px;
+    font-size: 1px;
+    clear: both;
+}
+
+#navMenu {
+    font-size: 13px;
+    color: #FFFFFF;
+    background-image: url(nav.png);
+    background-repeat: repeat-x;
+    background-position: left top;
+    padding-top: 100px
+}
+
+/*padding-top为了让这个菜单窗口正好定位在nav层上 */
+#navMenu A {
+    TEXT-DECORATION: none
+}
+
+#navMenu .multiUl {
+    width: 100%;
+    height: 30px;
+    CLEAR: both;
+    display: block;
+}
+
+#navMenu .multiUl LI {
+    display: block;
+    float: left;
+    height: 30px;
+    LINE-HEIGHT: 30px;
+    POSITION: relative;
+    width: 100px;
+}
+
+#navMenu .multiUl LI A.go {
+    PADDING-RIGHT: 4px;
+    DISPLAY: inline-block;
+    PADDING-LEFT: 4px;
+    Z-INDEX: 300;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px 7px;
+    WIDTH: auto;
+    COLOR: black;
+    LINE-HEIGHT: 30px;
+    PADDING-TOP: 0px;
+    HEIGHT: 30px;
+    TEXT-ALIGN: center;
+    font-size: 14px;
+}
+
+#navMenu .multiUl LI A.on {
+    FONT-WEIGHT: bold;
+    COLOR: #dfe8d9;
+    TEXT-DECORATION: none
+}
+
+#navMenu LI.s {
+    DISPLAY: inline;
+    FLOAT: left;
+    WIDTH: 8px;
+    COLOR: #517b55;
+    LINE-HEIGHT: 30px;
+    HEIGHT: 30px;
+    TEXT-ALIGN: center
+}
+
+#navMenu .multiUl LI BLOCKQUOTE {
+    DISPLAY: none;
+    Z-INDEX: 201;
+    LEFT: 0px;
+    POSITION: absolute;
+    TOP: 30px;
+    HEIGHT: auto
+}
+
+#navMenu .multiUl LI BLOCKQUOTE .ChildNavIn {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 5px;
+    OVERFLOW: hidden;
+    WIDTH: 100px;
+    COLOR: #dee6e9;
+    HEIGHT: auto;
+    TEXT-ALIGN: center;
+    /* BACKGROUND: url(../img/menuNav_icon.png) #1b453b no-repeat 37px -730px;  */
+    background-image: -moz-linear-gradient(top, #44A284, #2F4E43); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #44A284), color-stop(1, #2F4E43)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#44A284', endColorstr='#2F4E43', GradientType='0'); /* IE*/
+    background: linear-gradient(to bottom, #44A284, #2F4E43)
+}
+
+#navMenu .multiUl LI BLOCKQUOTE .ChildNavIn A {
+    PADDING-RIGHT: 4px;
+    DISPLAY: inline;
+    PADDING-LEFT: 4px;
+    FLOAT: left;
+    PADDING-BOTTOM: 2px;
+    MARGIN: 3px 0px 3px 6px;
+    WIDTH: 80%;
+    COLOR: #dee6e9;
+    LINE-HEIGHT: 18px;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #255f51 1px dotted;
+    TEXT-ALIGN: center
+}
+
+#navMenu .multiUl LI BLOCKQUOTE A:hover {
+    BACKGROUND: #2c705f;
+    COLOR: #fefbc2 ! important
+}
+
+#navMenu .multiUl LI BLOCKQUOTE a.First {
+    /* BACKGROUND: url(../img/menuNav_icon.png) no-repeat 32px -732px;
+    padding-top: 10px; */
+    margin-top: 5px;
+}
+
+#navMenu .multiUl #TopNavDept {
+
+}
+
+#navMenu .multiUl #TopNavDept BLOCKQUOTE {
+    DISPLAY: none;
+    LEFT: -254px
+}
+
+#navMenu .multiUl #TopNavDept BLOCKQUOTE .ChildNavIn {
+    BACKGROUND: #1b453b;
+    WIDTH: 1000px
+}
+
+#navMenu .multiUl #TopNavDept .NavDeptIn {
+    DISPLAY: inline;
+    BACKGROUND: none transparent scroll repeat 0% 0%;
+    FLOAT: left;
+    MARGIN: 0px 0px 0px 20px;
+    WIDTH: 310px;
+    TEXT-ALIGN: left ! important
+}
+
+#navMenu .multiUl #TopNavDept .NavDeptIn A {
+    FLOAT: none;
+    BORDER-TOP-STYLE: none;
+    BORDER-RIGHT-STYLE: none;
+    BORDER-LEFT-STYLE: none;
+    BORDER-BOTTOM-STYLE: none
+}
+
+#navMenu .NavDeptIn H6 {
+    OVERFLOW: hidden;
+    WIDTH: 310px;
+    LINE-HEIGHT: 23px ! important;
+    BORDER-BOTTOM: #2c705f 1px solid;
+    HEIGHT: 23px ! important;
+    TEXT-ALIGN: left
+}
+
+#navMenu .NavDeptIn H6 A {
+    DISPLAY: block;
+    MARGIN: 0px;
+    LINE-HEIGHT: 23px;
+    HEIGHT: 23px ! important
+}
+
+#navMenu .multiUl #TopNavDept .NavDeptIn .NavDeptInList {
+    MARGIN-TOP: 5px;
+    OVERFLOW: hidden;
+    WIDTH: auto
+}
+
+#navMenu .multiUl #TopNavDept .NavDeptIn .NavDeptInList A {
+    FLOAT: left;
+    MARGIN: 2px 1px 0px;
+    WIDTH: auto;
+    COLOR: #acbc9e;
+    WHITE-SPACE: nowrap
+}
+
+#navMenu .multiUl #TopNavDept .NavDeptInOther {
+    CLEAR: both;
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 20px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 5px 0px;
+    OVERFLOW: hidden;
+    PADDING-TOP: 5px
+}
+
+#navMenu .multiUl #TopNavDept .NavDeptInOther A {
+    PADDING-LEFT: 13px;
+    BACKGROUND: url(../img/menuNav_icon.png) no-repeat 0px -116px;
+    MARGIN: 0px 7px;
+    WIDTH: auto;
+    BORDER-TOP-STYLE: none;
+    BORDER-RIGHT-STYLE: none;
+    BORDER-LEFT-STYLE: none;
+    BORDER-BOTTOM-STYLE: none
+}
+
+/*代码整理 - www.97zzw.com*/

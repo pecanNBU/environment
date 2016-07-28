@@ -1,0 +1,195 @@
+.btn_1, .btn_2, .btn_3 {
+    /* width: 100px; */
+    height: 30px;
+    margin-left: 15px;
+    /* padding: 6px 8px; */
+    padding: 6px 5px 6px 20px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: right;
+    *text-align: center;
+    line-height: 1;
+    *padding: 4px 10px;
+    /* letter-spacing: 20px; */
+    letter-spacing: 15px;
+    margin-right: -20px;
+    font-family: Tahoma, Arial/ 9 !important;
+    overflow: visible;
+    color: #333;
+    border: solid 1px #999;
+    border-radius: 5px;
+    background: #DDD;
+    background-image: -moz-linear-gradient(top, #FFFFFF, #DDDDDD); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #DDDDDD)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#DDDDDD', GradientType='0'); /* IE*/
+    background: linear-gradient(to bottom, #FFFFFF, #DDDDDD);
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0 -1px 0 rgba(0, 0, 0, .09);
+    -moz-transition: -moz-box-shadow linear .2s;
+    -webkit-transition: -webkit-box-shadow linear .2s;
+    transition: box-shadow linear .2s;
+    z-index: 9999;
+}
+
+.btn_3::-moz-focus-inner, .btn_1::-moz-focus-inner, .btn_2::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.btn_3:focus, .btn_1:focus, .btn_2:focus {
+    outline: none 0;
+    border-color: #426DC9;
+    box-shadow: 0 0 8px rgba(66, 109, 201, .9);
+}
+
+.btn_3:hover, .btn_1:hover, .btn_2:hover {
+    color: #000;
+    border-color: #666;
+}
+
+.btn_3:active, .btn_1:active, .btn_2:active {
+    border-color: #666;
+    background-image: -moz-linear-gradient(top, #DDDDDD, #FFFFFF); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #DDDDDD), color-stop(1, #FFFFFF)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#FFFFFF', GradientType='0'); /* IE*/
+    background: linear-gradient(to bottom, #DDDDDD, #FFFFFF);
+    box-shadow: inset 0 1px 5px rgba(66, 109, 201, .9), inset 0 1px 1em rgba(0, 0, 0, .3);
+}
+
+.btn_3, .btn_1 {
+    color: #FFF;
+    border: solid 1px #1c6a9e;
+    background: #2288cc;
+    background-image: -moz-linear-gradient(top, #33bbee, #2288cc); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #33bbee), color-stop(1, #2288cc)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bbee', endColorstr='#2288cc', GradientType='0'); /* IE*/
+    background: linear-gradient(to bottom, #33bbee, #2288cc);
+    text-shadow: -1px -1px 1px #1c6a9e;
+}
+
+.btn_3:hover, .btn_1:hover {
+    color: #FFF;
+    border-color: #0F3A56;
+}
+
+.btn_3:active, .btn_1:active {
+    border-color: #1c6a9e;
+    background-image: -moz-linear-gradient(top, #33bbee, #2288cc); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #33bbee), color-stop(1, #2288cc)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bbee', endColorstr='#2288cc', GradientType='0'); /* IE*/
+    background: linear-gradient(to bottom, #33bbee, #2288cc);
+}
+
+.aBtn {
+    background: #2daebf url(../img/overlay-button.png) repeat-x 0 0;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    position: relative;
+    cursor: pointer;
+    font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1", Arial, HELVETICA;
+    font-size: 14px;
+    line-height: 1;
+    border-collapse: separate;
+}
+
+.aBtn:link {
+    color: #FFF;
+}
+
+.aBtn:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+.aBtn:active {
+    top: 1px;
+}
+
+.aBtn:visited {
+    color: #FFF
+}
+
+.aDetail {
+    background-color: #2daebf
+}
+
+.aDetail:hover {
+    background-color: #007d9a;
+}
+
+.aAdd {
+    background-color: #e457d8
+}
+
+.aAdd:hover {
+    background-color: #A82B9E;
+}
+
+.aEdit {
+    background-color: #ff5c00
+}
+
+.aEdit:hover {
+    background-color: #C55205;
+}
+
+.aAdd {
+    background-color: #2daebf
+}
+
+.aAdd:hover {
+    background-color: #007d9a;
+}
+
+.aEdit {
+    background-color: #2daebf
+}
+
+.aEdit:hover {
+    background-color: #007d9a;
+}
+
+.aDel {
+    background-color: #ad0d0d
+}
+
+.aDel:hover {
+    background-color: #690404;
+}
+
+.aOut {
+    background-color: #04C422
+}
+
+.aOut:hover {
+    background-color: #027E16;
+}
+
+.aGray {
+    background-color: gray;
+    color: white;
+}
+
+.aGray:hover {
+    background-color: gray;
+    color: white;
+}
+
+.aYellow {
+    background-color: #f58c08
+}
+
+.aYellow:hover {
+    background-color: #bd4208;
+}

@@ -1,0 +1,4076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - cpn2025db@localhost" uuid="910015ee-0772-49aa-9c66-437f1cb56be9">
+    <database-info product="MySQL" version="5.6.25" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="cpn2025db">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="bhasdb"/>
+      <schema id="3" name="cms2025db"/>
+      <schema id="4" name="ctm2025db"/>
+      <schema id="5" name="elec2000db"/>
+      <schema id="6" name="information_schema"/>
+      <schema id="7" name="ireportdb"/>
+      <schema id="8" name="lineardb"/>
+      <schema id="9" name="mysql"/>
+      <schema id="10" name="odp200db"/>
+      <schema id="11" name="performance_schema"/>
+      <schema id="12" name="sensordb"/>
+      <schema id="13" name="sts2000db"/>
+      <schema id="14" name="test"/>
+      <schema id="15" name="wn430db"/>
+      <schema id="16" name="wnProjectdb"/>
+      <schema id="17" name="wnwlCloud"/>
+      <table id="18" parent="1" name="alarm_push">
+        <comment>报警推送-触发条件</comment>
+      </table>
+      <table id="19" parent="1" name="alarm_push_ignore">
+        <comment>报警推送-忽视参数
+此表针对气象参数，当气象参数满足一定条件时，可能会造成颗粒物、噪声等数值误差较大，甚至无效，故不触发报警推送</comment>
+      </table>
+      <table id="20" parent="1" name="camera_curise">
+        <comment>摄像头巡检路线</comment>
+      </table>
+      <table id="21" parent="1" name="camera_info">
+        <comment>摄像头基本信息</comment>
+      </table>
+      <table id="22" parent="1" name="camera_posi">
+        <comment>摄像头预置位</comment>
+      </table>
+      <table id="23" parent="1" name="d_type">
+        <comment>数据词典</comment>
+      </table>
+      <table id="24" parent="1" name="data_invalid"/>
+      <table id="25" parent="1" name="dep_cons">
+        <comment>建筑工地</comment>
+      </table>
+      <table id="26" parent="1" name="dep_oper">
+        <comment>运营单位</comment>
+      </table>
+      <table id="27" parent="1" name="dep_supe">
+        <comment>上级单位、环保部门</comment>
+      </table>
+      <table id="28" parent="1" name="form_cali _noise">
+        <comment>噪声在线监测仪校准记录-基础表</comment>
+      </table>
+      <table id="29" parent="1" name="form_cali_flow">
+        <comment>流量校准记录表</comment>
+      </table>
+      <table id="30" parent="1" name="form_cali_pm">
+        <comment>颗粒物检测仪校准记录表</comment>
+      </table>
+      <table id="31" parent="1" name="form_comm_check"/>
+      <table id="32" parent="1" name="form_data_check"/>
+      <table id="33" parent="1" name="form_dev_change"/>
+      <table id="34" parent="1" name="form_dev_clean"/>
+      <table id="35" parent="1" name="form_dev_fault"/>
+      <table id="36" parent="1" name="form_dev_move"/>
+      <table id="37" parent="1" name="form_dev_repair"/>
+      <table id="38" parent="1" name="form_feedback">
+        <comment>反馈意见记录表</comment>
+      </table>
+      <table id="39" parent="1" name="form_noise_data">
+        <comment>噪声在线监测仪校准记录-数据表</comment>
+      </table>
+      <table id="40" parent="1" name="form_poll_day">
+        <comment>巡检记录表-日巡检</comment>
+      </table>
+      <table id="41" parent="1" name="form_poll_month">
+        <comment>巡检记录-月巡检</comment>
+      </table>
+      <table id="42" parent="1" name="form_poll_week"/>
+      <table id="43" parent="1" name="form_poll_year">
+        <comment>巡检记录-年报表</comment>
+      </table>
+      <table id="44" parent="1" name="form_qual_check"/>
+      <table id="45" parent="1" name="form_trace_val"/>
+      <table id="46" parent="1" name="log_login">
+        <comment>登录日志</comment>
+      </table>
+      <table id="47" parent="1" name="log_oper">
+        <comment>操作日志</comment>
+      </table>
+      <table id="48" parent="1" name="log_oper_cont">
+        <comment>操作日志-字段详情</comment>
+      </table>
+      <table id="49" parent="1" name="log_show">
+        <comment>操作日志-页面浏览</comment>
+      </table>
+      <table id="50" parent="1" name="pm_state">
+        <comment>颗粒物指数状态表</comment>
+      </table>
+      <table id="51" parent="1" name="priv_actor">
+        <comment>角色权限基础表</comment>
+      </table>
+      <table id="52" parent="1" name="priv_actor_nodes">
+        <comment>角色权限-节点</comment>
+      </table>
+      <table id="53" parent="1" name="priv_actor_user">
+        <comment>角色权限-用户</comment>
+      </table>
+      <table id="54" parent="1" name="record_alarm">
+        <comment>报警记录</comment>
+      </table>
+      <table id="55" parent="1" name="record_alarm_push">
+        <comment>报警记录-推送判定</comment>
+      </table>
+      <table id="56" parent="1" name="record_data">
+        <comment>分钟值：每分钟的监测点数据</comment>
+      </table>
+      <table id="57" parent="1" name="record_data_backup">
+        <comment>数据备份记录</comment>
+      </table>
+      <table id="58" parent="1" name="record_data_import">
+        <comment>离线导入记录</comment>
+      </table>
+      <table id="59" parent="1" name="record_debug">
+        <comment>系统调试记录，调试期间不存储，不报警，不推送</comment>
+      </table>
+      <table id="60" parent="1" name="record_noise">
+        <comment>报警-噪声录音记录</comment>
+      </table>
+      <table id="61" parent="1" name="record_offline">
+        <comment>离线记录</comment>
+      </table>
+      <table id="62" parent="1" name="record_photo">
+        <comment>报警-图片抓拍记录</comment>
+      </table>
+      <table id="63" parent="1" name="reg_alarm_over">
+        <comment>参数报警-超标报警</comment>
+      </table>
+      <table id="64" parent="1" name="reg_alarm_trend">
+        <comment>参数报警-趋势报警</comment>
+      </table>
+      <table id="65" parent="1" name="reg_info">
+        <comment>设备信息</comment>
+      </table>
+      <table id="66" parent="1" name="reg_param">
+        <comment>设备参数</comment>
+      </table>
+      <table id="67" parent="1" name="tree_node">
+        <comment>模块节点</comment>
+      </table>
+      <table id="68" parent="1" name="user_detail">
+        <comment>人员扩展信息</comment>
+      </table>
+      <table id="69" parent="1" name="user_info">
+        <comment>人员基本信息表</comment>
+      </table>
+      <table id="70" parent="1" name="version_info">
+        <comment>版本信息</comment>
+      </table>
+      <column id="71" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="72" parent="18" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="73" parent="18" name="val">
+        <comment>触发值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="74" parent="18" name="dt_last">
+        <comment>持续时间</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="75" parent="18" name="push_type">
+        <comment>推送对象</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="76" parent="18" name="fk_alarm_push_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="77" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="78" parent="18" name="fk_alarm_push_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="79" parent="19" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="80" parent="19" name="alarm_push_id">
+        <comment>报警推送Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="81" parent="19" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="82" parent="19" name="val">
+        <comment>值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <index id="83" parent="19" name="fk_alarm_push_ignore_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="84" parent="19" name="fk_alarm_push_ignore_push">
+        <columns>alarm_push_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="85" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="86" parent="19" name="fk_alarm_push_ignore_push">
+        <columns>alarm_push_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="87" parent="19" name="fk_alarm_push_ignore_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="88" parent="20" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="89" parent="20" name="camera_id">
+        <comment>摄像头</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="90" parent="20" name="no">
+        <comment>巡检位置编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="91" parent="20" name="name">
+        <comment>巡检位置名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="92" parent="20" name="sort">
+        <comment>顺序</comment>
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="93" parent="20" name="camera_curise_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="94" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="95" parent="20" name="fk_camera_curise_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="96" parent="21" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="97" parent="21" name="reg_id">
+        <comment>设备编号</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="98" parent="21" name="no">
+        <comment>摄像头编号</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="99" parent="21" name="model">
+        <comment>设备型号</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="100" parent="21" name="brand">
+        <comment>品牌</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="101" parent="21" name="dt">
+        <comment>生产日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="102" parent="21" name="dt_expir">
+        <comment>保质期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <index id="103" parent="21" name="fk_camera_info_reg">
+        <columns>reg_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="104" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="105" parent="21" name="fk_camera_info_reg">
+        <columns>reg_id</columns>
+        <ref-key>~.reg_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="106" parent="22" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="107" parent="22" name="camera_id">
+        <comment>摄像头</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="108" parent="22" name="no">
+        <comment>预置位编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="109" parent="22" name="name">
+        <comment>预置位名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="110" parent="22" name="sort">
+        <comment>顺序</comment>
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="111" parent="22" name="fk_camera_posi_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="112" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="113" parent="22" name="fk_camera_posi_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="114" parent="23" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="115" parent="23" name="type_name">
+        <comment>类型名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="116" parent="23" name="parent_id">
+        <comment>父id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="117" parent="23" name="is_leaf">
+        <comment>是否叶子节点</comment>
+        <data-type>tinyint(3) unsigned|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="118" parent="23" name="en_name">
+        <comment>类型编码</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <index id="119" parent="23" name="fk_d_type_self">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="120" parent="23" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="121" parent="23" name="fk_d_type_self">
+        <columns>parent_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <column id="122" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="123" parent="24" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="124" parent="24" name="val">
+        <comment>参数值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <index id="125" parent="24" name="fk_data_invalid_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="126" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="127" parent="24" name="fk_data_invalid_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="128" parent="25" name="StatCode">
+        <comment>监测点编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="129" parent="25" name="StatBJH">
+        <comment>工程报建号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="130" parent="25" name="StatName">
+        <comment>监测点名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="131" parent="25" name="ChargeMan">
+        <comment>工地责任人</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="132" parent="25" name="Telephone">
+        <comment>联系电话</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="133" parent="25" name="Longitude">
+        <comment>经度</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="134" parent="25" name="Latitude">
+        <comment>纬度</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="135" parent="25" name="Department">
+        <comment>施工单位</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="136" parent="25" name="Address">
+        <comment>施工地址</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="137" parent="25" name="Country">
+        <comment>所属区县</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="138" parent="25" name="Street">
+        <comment>所属街镇</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="139" parent="25" name="Square">
+        <comment>占地面积</comment>
+        <mandatory>1</mandatory>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="140" parent="25" name="ProStartTime">
+        <comment>工程开始时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="141" parent="25" name="Stage">
+        <comment>施工进展情况</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="142" parent="25" name="PRIMARY">
+        <columns>StatCode</columns>
+        <primary>1</primary>
+      </key>
+      <column id="143" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="144" parent="26" name="dep_name">
+        <comment>单位名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="145" parent="26" name="charge_user">
+        <comment>负责人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="146" parent="26" name="address">
+        <comment>地址</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="147" parent="26" name="telephone">
+        <comment>固定电话</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="148" parent="26" name="fax">
+        <comment>传真</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="149" parent="26" name="web">
+        <comment>网址</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="150" parent="26" name="email">
+        <comment>邮箱</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="151" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="152" parent="27" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="153" parent="27" name="dep_name">
+        <comment>单位名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="154" parent="27" name="charge_user">
+        <comment>负责人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="155" parent="27" name="address">
+        <comment>地址</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="156" parent="27" name="mobilephone">
+        <comment>手机</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="157" parent="27" name="telephone">
+        <comment>固定电话</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="158" parent="27" name="fax">
+        <comment>传真</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="159" parent="27" name="web">
+        <comment>网址</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="160" parent="27" name="email">
+        <comment>联系邮箱</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="161" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="162" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="163" parent="28" name="cons_name">
+        <comment>工地名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="164" parent="28" name="dev_name">
+        <comment>仪器名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="165" parent="28" name="dep_name">
+        <comment>使用单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="166" parent="28" name="stat_bjh">
+        <comment>工程报建号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="167" parent="28" name="dev_type">
+        <comment>仪器型号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="168" parent="28" name="dev_no">
+        <comment>仪器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="169" parent="28" name="cali_name">
+        <comment>校准器名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="170" parent="28" name="cali_no">
+        <comment>校准器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="171" parent="28" name="check_dep">
+        <comment>检查单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="172" parent="28" name="check_user">
+        <comment>检查人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="173" parent="28" name="dt_check">
+        <comment>检查日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <key id="174" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="175" parent="29" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="176" parent="29" name="cons_name">
+        <comment>工地名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="177" parent="29" name="dev_name">
+        <comment>仪器名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="178" parent="29" name="dep_name">
+        <comment>使用单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="179" parent="29" name="stat_bjh">
+        <comment>工程报建号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="180" parent="29" name="dev_no">
+        <comment>仪器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="181" parent="29" name="dt_cali">
+        <comment>校准时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="182" parent="29" name="check_dep">
+        <comment>检查单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="183" parent="29" name="check_user">
+        <comment>检查人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="184" parent="29" name="dt_check">
+        <comment>检查时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="185" parent="29" name="be_data_set">
+        <comment>前-设定流量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="186" parent="29" name="be_data_1">
+        <comment>前-流量1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="187" parent="29" name="be_data_2">
+        <comment>前-流量2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="188" parent="29" name="be_data_3">
+        <comment>前-流量3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="189" parent="29" name="be_data_mis">
+        <comment>前-误差</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="190" parent="29" name="be_is_adjust">
+        <comment>前-是否调整</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <column id="191" parent="29" name="af_data_set">
+        <comment>后-设定流量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="192" parent="29" name="af_data_1">
+        <comment>后-流量1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="193" parent="29" name="af_data_2">
+        <comment>后-流量2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="194" parent="29" name="af_data_3">
+        <comment>后-流量3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="195" parent="29" name="af_data_mis">
+        <comment>后-误差</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="196" parent="29" name="af_is_pass">
+        <comment>后-是否符合</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <key id="197" parent="29" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="198" parent="30" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="199" parent="30" name="cons_name">
+        <comment>工地名称</comment>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="200" parent="30" name="dev_name">
+        <comment>仪器名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="201" parent="30" name="dep_name">
+        <comment>使用单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="202" parent="30" name="stat_bjh">
+        <comment>工程报建号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="203" parent="30" name="dev_no">
+        <comment>仪器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="204" parent="30" name="dt_cali">
+        <comment>校准时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="205" parent="30" name="check_dep">
+        <comment>检查单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="206" parent="30" name="check_user">
+        <comment>检查人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="207" parent="30" name="dt_check">
+        <comment>检查日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="208" parent="30" name="be_data_zero">
+        <comment>校零-零值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="209" parent="30" name="be_data_1">
+        <comment>校零-实测1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="210" parent="30" name="be_data_2">
+        <comment>校零-实测2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="211" parent="30" name="be_data_3">
+        <comment>校零-实测3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="212" parent="30" name="be_data">
+        <comment>校零</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="213" parent="30" name="be_is_qual">
+        <comment>校零-是否合格</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <column id="214" parent="30" name="af_data_span">
+        <comment>校标-跨度值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="215" parent="30" name="af_data_1">
+        <comment>校标-实测1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="216" parent="30" name="af_data_2">
+        <comment>校标-实测2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="217" parent="30" name="af_data_3">
+        <comment>校标-实测3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="218" parent="30" name="af_data">
+        <comment>校标</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="219" parent="30" name="af_is_qual">
+        <comment>校标-是否合格</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <key id="220" parent="30" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="221" parent="31" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="222" parent="31" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="223" parent="32" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="224" parent="32" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="225" parent="33" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="226" parent="33" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="227" parent="34" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="228" parent="34" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="229" parent="35" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="230" parent="35" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="231" parent="36" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="232" parent="36" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="233" parent="37" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="234" parent="37" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="235" parent="38" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="236" parent="38" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="237" parent="39" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="238" parent="39" name="form_noise_id">
+        <comment>噪声校准基础表</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="239" parent="39" name="dt">
+        <comment>校准日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="240" parent="39" name="data_1">
+        <comment>校准值1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="241" parent="39" name="data_2">
+        <comment>校准值2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="242" parent="39" name="data_mis">
+        <comment>误差</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <key id="243" parent="39" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="244" parent="40" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="245" parent="40" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="246" parent="41" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="247" parent="41" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="248" parent="42" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="249" parent="42" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="250" parent="43" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="251" parent="43" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="252" parent="44" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="253" parent="44" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="254" parent="45" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="255" parent="45" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="256" parent="46" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="257" parent="46" name="user_id">
+        <comment>登录用户</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="258" parent="46" name="dt">
+        <comment>登录日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="259" parent="46" name="ip">
+        <comment>IP地址</comment>
+        <data-type>bigint(4)|0</data-type>
+      </column>
+      <column id="260" parent="46" name="browser">
+        <comment>浏览器</comment>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="261" parent="46" name="fk_log_login_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="262" parent="46" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="263" parent="46" name="fk_log_login_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="264" parent="47" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="265" parent="47" name="user_id">
+        <comment>操作人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="266" parent="47" name="dt">
+        <comment>操作日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="267" parent="47" name="type">
+        <comment>操作类型</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="268" parent="47" name="table_id">
+        <comment>数据表</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="269" parent="47" name="table_name">
+        <comment>数据表说明</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="270" parent="47" name="comment">
+        <comment>操作说明</comment>
+        <data-type>varchar(300)|0</data-type>
+      </column>
+      <index id="271" parent="47" name="fk_log_oper_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="272" parent="47" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="273" parent="47" name="fk_log_oper_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="274" parent="48" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="275" parent="48" name="log_id">
+        <comment>日志id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="276" parent="48" name="tb_key">
+        <comment>表字段</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="277" parent="48" name="tb_value">
+        <comment>原始值</comment>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="278" parent="48" name="tb_value_cur">
+        <comment>改后值</comment>
+        <data-type>text|0</data-type>
+      </column>
+      <index id="279" parent="48" name="fk_log_oper_cont_log">
+        <columns>log_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="280" parent="48" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="281" parent="48" name="fk_log_oper_cont_log">
+        <columns>log_id</columns>
+        <ref-key>~.log_oper.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="282" parent="49" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="283" parent="49" name="user_id">
+        <comment>操作人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="284" parent="49" name="dt">
+        <comment>操作日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="285" parent="49" name="url">
+        <comment>链接</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <key id="286" parent="49" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="287" parent="50" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="288" parent="50" name="val">
+        <comment>状态值</comment>
+        <data-type>tinyint(2)|0</data-type>
+      </column>
+      <column id="289" parent="50" name="name">
+        <comment>状态名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="290" parent="50" name="color">
+        <comment>状态颜色</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="291" parent="50" name="data_start">
+        <comment>起始值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="292" parent="50" name="data_end">
+        <comment>结束值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <key id="293" parent="50" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="294" parent="51" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="295" parent="51" name="actor_name">
+        <comment>角色名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="296" parent="51" name="actor_desc">
+        <comment>角色描述</comment>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="297" parent="51" name="name">
+        <comment>acegi规则：ROLE_1</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <key id="298" parent="51" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="299" parent="52" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="300" parent="52" name="actor_id">
+        <comment>角色id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="301" parent="52" name="node_id">
+        <comment>节点id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="302" parent="52" name="state">
+        <comment>节点权限：1-编辑；2-浏览</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="303" parent="52" name="fk_priv_actor_nodes_actor">
+        <columns>actor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="304" parent="52" name="fk_priv_actor_nodes_node">
+        <columns>node_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="305" parent="52" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="306" parent="52" name="fk_priv_actor_nodes_actor">
+        <columns>actor_id</columns>
+        <ref-key>~.priv_actor.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="307" parent="52" name="fk_priv_actor_nodes_node">
+        <columns>node_id</columns>
+        <ref-key>~.tree_node.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <column id="308" parent="53" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="309" parent="53" name="user_id">
+        <comment>用户id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="310" parent="53" name="actor_id">
+        <comment>角色id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="311" parent="53" name="fk_priv_actor_user_actor">
+        <columns>actor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="312" parent="53" name="fk_priv_actor_user_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="313" parent="53" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="314" parent="53" name="fk_priv_actor_user_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="315" parent="53" name="fk_priv_actor_user_actor">
+        <columns>actor_id</columns>
+        <ref-key>~.tree_node.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="316" parent="54" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="317" parent="54" name="StatCode">
+        <comment>监测点编号</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="318" parent="54" name="TP">
+        <comment>颗粒物浓度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="319" parent="54" name="Db">
+        <comment>噪声值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="320" parent="54" name="DataTime">
+        <comment>数据时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="321" parent="54" name="WindSpeed">
+        <comment>风速</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="322" parent="54" name="Rain">
+        <comment>降雨量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="323" parent="54" name="WindDirection">
+        <comment>风向</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="324" parent="54" name="Temperature">
+        <comment>温度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="325" parent="54" name="Humidity">
+        <comment>湿度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="326" parent="54" name="AirPressure">
+        <comment>气压</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="327" parent="54" name="DataStatus">
+        <comment>颗粒物标识符</comment>
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="328" parent="54" name="alatm_type">
+        <comment>1：超标 2：趋势</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="329" parent="54" name="alarm_id">
+        <comment>reg_alarm_over</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <key id="330" parent="54" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="331" parent="55" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="332" parent="55" name="reg_param_id">
+        <comment>参数Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="333" parent="55" name="val">
+        <comment>推送值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="334" parent="55" name="dt">
+        <comment>推送时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="335" parent="55" name="push_type">
+        <comment>推送对象</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="336" parent="55" name="push_data">
+        <comment>推送内容</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="337" parent="55" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="338" parent="56" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="339" parent="56" name="StatCode">
+        <comment>监测点编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="340" parent="56" name="TP">
+        <comment>颗粒物浓度</comment>
+        <mandatory>1</mandatory>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="341" parent="56" name="Db">
+        <comment>噪声值</comment>
+        <mandatory>1</mandatory>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="342" parent="56" name="DataTime">
+        <comment>时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="343" parent="56" name="WindSpeed">
+        <comment>风速</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="344" parent="56" name="Rain">
+        <comment>降雨量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="345" parent="56" name="WindDirection">
+        <comment>风向</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="346" parent="56" name="Temperature">
+        <comment>温度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="347" parent="56" name="Humidity">
+        <comment>湿度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="348" parent="56" name="AirPressure">
+        <comment>气压</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="349" parent="56" name="DataStatus">
+        <comment>颗粒物标识符</comment>
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="350" parent="56" name="status">
+        <comment>数据标识符</comment>
+        <data-type>varchar(14)|0</data-type>
+      </column>
+      <key id="351" parent="56" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="352" parent="57" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="353" parent="57" name="user_id">
+        <comment>操作人</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(150)|0</data-type>
+      </column>
+      <column id="354" parent="57" name="dt">
+        <comment>备份日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="355" parent="57" name="comment">
+        <comment>备份说明</comment>
+        <data-type>varchar(500)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="356" parent="57" name="data_type">
+        <comment>备份类型</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="357" parent="57" name="data_size">
+        <comment>备份容量</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <index id="358" parent="57" name="fk_record_data_backup_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="359" parent="57" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="360" parent="57" name="fk_record_data_backup_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="361" parent="58" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="362" parent="58" name="user_id">
+        <comment>操作人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="363" parent="58" name="dt">
+        <comment>导入日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="364" parent="58" name="dt_last">
+        <comment>操作时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="365" parent="58" name="file_type">
+        <comment>文件类型</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="366" parent="58" name="state">
+        <comment>导入状态</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="367" parent="58" name="comment">
+        <comment>操作说明</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <index id="368" parent="58" name="fk_record_data_import_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="369" parent="58" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="370" parent="58" name="fk_record_data_import_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="371" parent="59" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="372" parent="59" name="user_id">
+        <comment>调试人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="373" parent="59" name="dt_start">
+        <comment>开始时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="374" parent="59" name="dt_end">
+        <comment>结束时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="375" parent="59" name="debug_note">
+        <comment>调试原因</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <column id="376" parent="59" name="debug_result">
+        <comment>调试结果</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <column id="377" parent="59" name="debug_type">
+        <comment>1:数据调试 2：系统调试</comment>
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <key id="378" parent="59" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="379" parent="60" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="380" parent="60" name="camera_id">
+        <comment>摄像头id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="381" parent="60" name="alarm_id">
+        <comment>报警数据</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="382" parent="60" name="dt">
+        <comment>更新日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="383" parent="60" name="path">
+        <comment>音频路径</comment>
+        <data-type>varchar(200)|0</data-type>
+      </column>
+      <column id="384" parent="60" name="type">
+        <comment>1:自动 2:手动</comment>
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <index id="385" parent="60" name="fk_record_noise_alarm">
+        <columns>alarm_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="386" parent="60" name="fk_record_noise_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="387" parent="60" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="388" parent="60" name="fk_record_noise_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="389" parent="60" name="fk_record_noise_alarm">
+        <columns>alarm_id</columns>
+        <ref-key>~.record_alarm.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="390" parent="61" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="391" parent="61" name="reg_id">
+        <comment>设备Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="392" parent="61" name="dt_start">
+        <comment>开始离线</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="393" parent="61" name="dt_end">
+        <comment>结束离线</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="394" parent="61" name="comment">
+        <comment>说明</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <index id="395" parent="61" name="fk_record_offline_reg">
+        <columns>reg_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="396" parent="61" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="397" parent="61" name="fk_record_offline_reg">
+        <columns>reg_id</columns>
+        <ref-key>~.reg_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="398" parent="62" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="399" parent="62" name="camera_id">
+        <comment>摄像头Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="400" parent="62" name="alarm_id">
+        <comment>报警记录</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="401" parent="62" name="dt">
+        <comment>更新日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="402" parent="62" name="path">
+        <comment>图片路径</comment>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="403" parent="62" name="type">
+        <comment>1:自动 2:手动</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="404" parent="62" name="fk_record_photo_alarm">
+        <columns>alarm_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="405" parent="62" name="fk_record_photo_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="406" parent="62" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="407" parent="62" name="fk_record_photo_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="408" parent="62" name="fk_record_photo_alarm">
+        <columns>alarm_id</columns>
+        <ref-key>~.record_alarm.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="409" parent="63" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="410" parent="63" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="411" parent="63" name="excep_min">
+        <comment>报警下限</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="412" parent="63" name="excep_max">
+        <comment>报警上限</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="413" parent="63" name="excep_return">
+        <comment>门限回差值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="414" parent="63" name="dt_start">
+        <comment>开始时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="415" parent="63" name="dt_end">
+        <comment>结束时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="416" parent="63" name="dt_month">
+        <comment>月份</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="417" parent="63" name="fk_reg_alarm_over_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="418" parent="63" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="419" parent="63" name="fk_reg_alarm_over_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="420" parent="64" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="421" parent="64" name="reg_param_id">
+        <comment>报警参数</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="422" parent="64" name="fk_reg_alarm_trend_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="423" parent="64" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="424" parent="64" name="fk_reg_alarm_trend_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="425" parent="65" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="426" parent="65" name="StatCode">
+        <comment>监测点编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="427" parent="65" name="DevCode">
+        <comment>设备编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="428" parent="65" name="StartTime">
+        <comment>安装时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="429" parent="65" name="PreEndTime">
+        <comment>预计结束时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="430" parent="65" name="EndTime">
+        <comment>实际结束时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="431" parent="65" name="DevStatus">
+        <comment>设备是否启动</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="432" parent="65" name="VideoURL">
+        <comment>视频地址</comment>
+        <data-type>varchar(200)|0</data-type>
+      </column>
+      <column id="433" parent="65" name="address">
+        <comment>所处方位</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="434" parent="65" name="longitude">
+        <comment>经度</comment>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="435" parent="65" name="latitude">
+        <comment>纬度</comment>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="436" parent="65" name="period">
+        <comment>采样周期</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="437" parent="65" name="fk_reg_info_stat">
+        <columns>StatCode</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="438" parent="65" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="439" parent="65" name="fk_reg_info_stat">
+        <columns>StatCode</columns>
+        <ref-key>~.dep_cons.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="440" parent="66" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="441" parent="66" name="reg_id">
+        <comment>设备Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="442" parent="66" name="para_name">
+        <comment>参数名</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="443" parent="66" name="para_type_id">
+        <comment>参数类型</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="444" parent="66" name="unit_type_id">
+        <comment>参数单位</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="445" parent="66" name="memo_type">
+        <comment>存储类型</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="446" parent="66" name="devId">
+        <comment>0~256</comment>
+        <data-type>tinyint(3) unsigned|0</data-type>
+      </column>
+      <column id="447" parent="66" name="offset">
+        <comment>0~65535</comment>
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <index id="448" parent="66" name="fk_reg_param_para">
+        <columns>para_type_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="449" parent="66" name="fk_reg_param_reg">
+        <columns>reg_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="450" parent="66" name="fk_reg_param_unit">
+        <columns>unit_type_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="451" parent="66" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="452" parent="66" name="fk_reg_param_reg">
+        <columns>reg_id</columns>
+        <ref-key>~.reg_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="453" parent="66" name="fk_reg_param_para">
+        <columns>para_type_id</columns>
+        <ref-key>~.d_type.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="454" parent="66" name="fk_reg_param_unit">
+        <columns>unit_type_id</columns>
+        <ref-key>~.d_type.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="455" parent="67" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="456" parent="67" name="name">
+        <comment>节点名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="457" parent="67" name="parent_id">
+        <comment>父节点Id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="458" parent="67" name="type">
+        <comment>节点类型</comment>
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <column id="459" parent="67" name="url">
+        <comment>节点链接</comment>
+        <data-type>varchar(200)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="460" parent="67" name="title">
+        <comment>节点提示信息</comment>
+        <data-type>varchar(200)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="461" parent="67" name="sort">
+        <comment>排序</comment>
+        <data-type>tinyint(20)|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="462" parent="67" name="icon">
+        <comment>节点图标</comment>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="463" parent="67" name="comment">
+        <comment>节点说明</comment>
+        <data-type>varchar(500)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="464" parent="67" name="fk_tree_nodes_parent">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="465" parent="67" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="466" parent="67" name="fk_tree_nodes_parent">
+        <columns>parent_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <column id="467" parent="68" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="468" parent="68" name="mobilephone">
+        <comment>手机</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="469" parent="68" name="telephone">
+        <comment>固定电话</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="470" parent="68" name="email">
+        <comment>邮箱</comment>
+        <data-type>varchar(60)|0</data-type>
+      </column>
+      <column id="471" parent="68" name="qq">
+        <comment>QQ</comment>
+        <data-type>varchar(12)|0</data-type>
+      </column>
+      <column id="472" parent="68" name="pic_head">
+        <comment>头像地址</comment>
+        <data-type>varchar(200)|0</data-type>
+      </column>
+      <column id="473" parent="68" name="sex">
+        <comment>性别</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="474" parent="68" name="id_card">
+        <comment>身份证</comment>
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="475" parent="68" name="address">
+        <comment>居住地</comment>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <key id="476" parent="68" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="477" parent="69" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="478" parent="69" name="login_name">
+        <comment>登录名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="479" parent="69" name="login_pwd">
+        <comment>登录密码</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="480" parent="69" name="user_name">
+        <comment>用户名</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="481" parent="69" name="isUse">
+        <comment>账号状态</comment>
+        <data-type>tinyint(3)|0</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="482" parent="69" name="detail_id">
+        <comment>详细信息</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="483" parent="69" name="fk_user_info_detail">
+        <columns>detail_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="484" parent="69" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="485" parent="69" name="fk_user_info_detail">
+        <columns>detail_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="486" parent="70" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="487" parent="70" name="charge_user_id">
+        <comment>负责人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="488" parent="70" name="appr_user_id">
+        <comment>审批人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="489" parent="70" name="version">
+        <comment>版本号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="490" parent="70" name="dt">
+        <comment>更新日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="491" parent="70" name="comment">
+        <comment>版本详情</comment>
+        <data-type>varchar(1000)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="492" parent="70" name="fk_system_about_dutyUser">
+        <columns>charge_user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="493" parent="70" name="fk_version_info_appr">
+        <columns>appr_user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="494" parent="70" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="495" parent="70" name="fk_system_about_dutyUser">
+        <columns>charge_user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="496" parent="70" name="fk_version_info_appr">
+        <columns>appr_user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+  <data-source name="hibernate.cfg.xml/Hibernate" uuid="c553cddd-e9c8-4508-8c1c-1ef3e38c2559">
+    <database-info product="MySQL" version="5.6.25" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="cpn2025db">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="bhasdb"/>
+      <schema id="3" name="cms2025db"/>
+      <schema id="4" name="ctm2025db"/>
+      <schema id="5" name="elec2000db"/>
+      <schema id="6" name="information_schema"/>
+      <schema id="7" name="ireportdb"/>
+      <schema id="8" name="lineardb"/>
+      <schema id="9" name="mysql"/>
+      <schema id="10" name="odp200db"/>
+      <schema id="11" name="performance_schema"/>
+      <schema id="12" name="sensordb"/>
+      <schema id="13" name="sts2000db"/>
+      <schema id="14" name="test"/>
+      <schema id="15" name="wn430db"/>
+      <schema id="16" name="wnProjectdb"/>
+      <schema id="17" name="wnwlCloud"/>
+      <table id="18" parent="1" name="alarm_push">
+        <comment>报警推送-触发条件</comment>
+      </table>
+      <table id="19" parent="1" name="alarm_push_ignore">
+        <comment>报警推送-忽视参数
+此表针对气象参数，当气象参数满足一定条件时，可能会造成颗粒物、噪声等数值误差较大，甚至无效，故不触发报警推送</comment>
+      </table>
+      <table id="20" parent="1" name="camera_curise">
+        <comment>摄像头巡检路线</comment>
+      </table>
+      <table id="21" parent="1" name="camera_info">
+        <comment>摄像头基本信息</comment>
+      </table>
+      <table id="22" parent="1" name="camera_posi">
+        <comment>摄像头预置位</comment>
+      </table>
+      <table id="23" parent="1" name="d_type">
+        <comment>数据词典</comment>
+      </table>
+      <table id="24" parent="1" name="data_invalid"/>
+      <table id="25" parent="1" name="dep_cons">
+        <comment>建筑工地</comment>
+      </table>
+      <table id="26" parent="1" name="dep_oper">
+        <comment>运营单位</comment>
+      </table>
+      <table id="27" parent="1" name="dep_supe">
+        <comment>上级单位、环保部门</comment>
+      </table>
+      <table id="28" parent="1" name="form_cali _noise">
+        <comment>噪声在线监测仪校准记录-基础表</comment>
+      </table>
+      <table id="29" parent="1" name="form_cali_flow">
+        <comment>流量校准记录表</comment>
+      </table>
+      <table id="30" parent="1" name="form_cali_pm">
+        <comment>颗粒物检测仪校准记录表</comment>
+      </table>
+      <table id="31" parent="1" name="form_comm_check"/>
+      <table id="32" parent="1" name="form_data_check"/>
+      <table id="33" parent="1" name="form_dev_change"/>
+      <table id="34" parent="1" name="form_dev_clean"/>
+      <table id="35" parent="1" name="form_dev_fault"/>
+      <table id="36" parent="1" name="form_dev_move"/>
+      <table id="37" parent="1" name="form_dev_repair"/>
+      <table id="38" parent="1" name="form_feedback">
+        <comment>反馈意见记录表</comment>
+      </table>
+      <table id="39" parent="1" name="form_noise_data">
+        <comment>噪声在线监测仪校准记录-数据表</comment>
+      </table>
+      <table id="40" parent="1" name="form_poll_day">
+        <comment>巡检记录表-日巡检</comment>
+      </table>
+      <table id="41" parent="1" name="form_poll_month">
+        <comment>巡检记录-月巡检</comment>
+      </table>
+      <table id="42" parent="1" name="form_poll_week"/>
+      <table id="43" parent="1" name="form_poll_year">
+        <comment>巡检记录-年报表</comment>
+      </table>
+      <table id="44" parent="1" name="form_qual_check"/>
+      <table id="45" parent="1" name="form_trace_val"/>
+      <table id="46" parent="1" name="log_login">
+        <comment>登录日志</comment>
+      </table>
+      <table id="47" parent="1" name="log_oper">
+        <comment>操作日志</comment>
+      </table>
+      <table id="48" parent="1" name="log_oper_cont">
+        <comment>操作日志-字段详情</comment>
+      </table>
+      <table id="49" parent="1" name="log_show">
+        <comment>操作日志-页面浏览</comment>
+      </table>
+      <table id="50" parent="1" name="pm_state">
+        <comment>颗粒物指数状态表</comment>
+      </table>
+      <table id="51" parent="1" name="priv_actor">
+        <comment>角色权限基础表</comment>
+      </table>
+      <table id="52" parent="1" name="priv_actor_node">
+        <comment>角色权限-节点</comment>
+      </table>
+      <table id="53" parent="1" name="priv_actor_user">
+        <comment>角色权限-用户</comment>
+      </table>
+      <table id="54" parent="1" name="record_alarm">
+        <comment>报警记录</comment>
+      </table>
+      <table id="55" parent="1" name="record_alarm_push">
+        <comment>报警记录-推送判定</comment>
+      </table>
+      <table id="56" parent="1" name="record_data">
+        <comment>分钟值：每分钟的监测点数据</comment>
+      </table>
+      <table id="57" parent="1" name="record_data_backup">
+        <comment>数据备份记录</comment>
+      </table>
+      <table id="58" parent="1" name="record_data_import">
+        <comment>离线导入记录</comment>
+      </table>
+      <table id="59" parent="1" name="record_debug">
+        <comment>系统调试记录，调试期间不存储，不报警，不推送</comment>
+      </table>
+      <table id="60" parent="1" name="record_noise">
+        <comment>报警-噪声录音记录</comment>
+      </table>
+      <table id="61" parent="1" name="record_offline">
+        <comment>离线记录</comment>
+      </table>
+      <table id="62" parent="1" name="record_photo">
+        <comment>报警-图片抓拍记录</comment>
+      </table>
+      <table id="63" parent="1" name="reg_alarm_over">
+        <comment>参数报警-超标报警</comment>
+      </table>
+      <table id="64" parent="1" name="reg_alarm_trend">
+        <comment>参数报警-趋势报警</comment>
+      </table>
+      <table id="65" parent="1" name="reg_info">
+        <comment>设备信息</comment>
+      </table>
+      <table id="66" parent="1" name="reg_param">
+        <comment>设备参数</comment>
+      </table>
+      <table id="67" parent="1" name="tree_node">
+        <comment>模块节点</comment>
+      </table>
+      <table id="68" parent="1" name="user_detail">
+        <comment>人员扩展信息</comment>
+      </table>
+      <table id="69" parent="1" name="user_info">
+        <comment>人员基本信息表</comment>
+      </table>
+      <table id="70" parent="1" name="version_info">
+        <comment>版本信息</comment>
+      </table>
+      <column id="71" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="72" parent="18" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="73" parent="18" name="val">
+        <comment>触发值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="74" parent="18" name="dt_last">
+        <comment>持续时间</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="75" parent="18" name="push_type">
+        <comment>推送对象</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="76" parent="18" name="fk_alarm_push_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="77" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="78" parent="18" name="fk_alarm_push_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="79" parent="19" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="80" parent="19" name="alarm_push_id">
+        <comment>报警推送Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="81" parent="19" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="82" parent="19" name="val">
+        <comment>值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <index id="83" parent="19" name="fk_alarm_push_ignore_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="84" parent="19" name="fk_alarm_push_ignore_push">
+        <columns>alarm_push_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="85" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="86" parent="19" name="fk_alarm_push_ignore_push">
+        <columns>alarm_push_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="87" parent="19" name="fk_alarm_push_ignore_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="88" parent="20" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="89" parent="20" name="camera_id">
+        <comment>摄像头</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="90" parent="20" name="no">
+        <comment>巡检位置编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="91" parent="20" name="name">
+        <comment>巡检位置名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="92" parent="20" name="sort">
+        <comment>顺序</comment>
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="93" parent="20" name="camera_curise_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="94" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="95" parent="20" name="fk_camera_curise_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="96" parent="21" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="97" parent="21" name="reg_id">
+        <comment>设备编号</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="98" parent="21" name="no">
+        <comment>摄像头编号</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="99" parent="21" name="model">
+        <comment>设备型号</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="100" parent="21" name="brand">
+        <comment>品牌</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="101" parent="21" name="dt">
+        <comment>生产日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="102" parent="21" name="dt_expir">
+        <comment>保质期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <index id="103" parent="21" name="fk_camera_info_reg">
+        <columns>reg_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="104" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="105" parent="21" name="fk_camera_info_reg">
+        <columns>reg_id</columns>
+        <ref-key>~.reg_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="106" parent="22" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="107" parent="22" name="camera_id">
+        <comment>摄像头</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="108" parent="22" name="no">
+        <comment>预置位编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="109" parent="22" name="name">
+        <comment>预置位名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="110" parent="22" name="sort">
+        <comment>顺序</comment>
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="111" parent="22" name="fk_camera_posi_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="112" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="113" parent="22" name="fk_camera_posi_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="114" parent="23" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="115" parent="23" name="type_name">
+        <comment>类型名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="116" parent="23" name="parent_id">
+        <comment>父id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="117" parent="23" name="is_leaf">
+        <comment>是否叶子节点</comment>
+        <data-type>tinyint(3) unsigned|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="118" parent="23" name="en_name">
+        <comment>类型编码</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <index id="119" parent="23" name="fk_d_type_self">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="120" parent="23" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="121" parent="23" name="fk_d_type_self">
+        <columns>parent_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <column id="122" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="123" parent="24" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="124" parent="24" name="val">
+        <comment>参数值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <index id="125" parent="24" name="fk_data_invalid_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="126" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="127" parent="24" name="fk_data_invalid_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="128" parent="25" name="StatCode">
+        <comment>监测点编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="129" parent="25" name="StatBJH">
+        <comment>工程报建号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="130" parent="25" name="StatName">
+        <comment>监测点名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="131" parent="25" name="ChargeMan">
+        <comment>工地责任人</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="132" parent="25" name="Telephone">
+        <comment>联系电话</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="133" parent="25" name="Longitude">
+        <comment>经度</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="134" parent="25" name="Latitude">
+        <comment>纬度</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="135" parent="25" name="Department">
+        <comment>施工单位</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="136" parent="25" name="Address">
+        <comment>施工地址</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="137" parent="25" name="Country">
+        <comment>所属区县</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="138" parent="25" name="Street">
+        <comment>所属街镇</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="139" parent="25" name="Square">
+        <comment>占地面积</comment>
+        <mandatory>1</mandatory>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="140" parent="25" name="ProStartTime">
+        <comment>工程开始时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="141" parent="25" name="Stage">
+        <comment>施工进展情况</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="142" parent="25" name="PRIMARY">
+        <columns>StatCode</columns>
+        <primary>1</primary>
+      </key>
+      <column id="143" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="144" parent="26" name="dep_name">
+        <comment>单位名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="145" parent="26" name="charge_user">
+        <comment>负责人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="146" parent="26" name="address">
+        <comment>地址</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="147" parent="26" name="telephone">
+        <comment>固定电话</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="148" parent="26" name="fax">
+        <comment>传真</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="149" parent="26" name="web">
+        <comment>网址</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="150" parent="26" name="email">
+        <comment>邮箱</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="151" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="152" parent="27" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="153" parent="27" name="dep_name">
+        <comment>单位名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="154" parent="27" name="charge_user">
+        <comment>负责人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="155" parent="27" name="address">
+        <comment>地址</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="156" parent="27" name="mobilephone">
+        <comment>手机</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="157" parent="27" name="telephone">
+        <comment>固定电话</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="158" parent="27" name="fax">
+        <comment>传真</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="159" parent="27" name="web">
+        <comment>网址</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="160" parent="27" name="email">
+        <comment>联系邮箱</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="161" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="162" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="163" parent="28" name="cons_name">
+        <comment>工地名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="164" parent="28" name="dev_name">
+        <comment>仪器名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="165" parent="28" name="dep_name">
+        <comment>使用单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="166" parent="28" name="stat_bjh">
+        <comment>工程报建号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="167" parent="28" name="dev_type">
+        <comment>仪器型号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="168" parent="28" name="dev_no">
+        <comment>仪器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="169" parent="28" name="cali_name">
+        <comment>校准器名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="170" parent="28" name="cali_no">
+        <comment>校准器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="171" parent="28" name="check_dep">
+        <comment>检查单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="172" parent="28" name="check_user">
+        <comment>检查人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="173" parent="28" name="dt_check">
+        <comment>检查日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <key id="174" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="175" parent="29" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="176" parent="29" name="cons_name">
+        <comment>工地名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="177" parent="29" name="dev_name">
+        <comment>仪器名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="178" parent="29" name="dep_name">
+        <comment>使用单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="179" parent="29" name="stat_bjh">
+        <comment>工程报建号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="180" parent="29" name="dev_no">
+        <comment>仪器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="181" parent="29" name="dt_cali">
+        <comment>校准时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="182" parent="29" name="check_dep">
+        <comment>检查单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="183" parent="29" name="check_user">
+        <comment>检查人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="184" parent="29" name="dt_check">
+        <comment>检查时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="185" parent="29" name="be_data_set">
+        <comment>前-设定流量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="186" parent="29" name="be_data_1">
+        <comment>前-流量1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="187" parent="29" name="be_data_2">
+        <comment>前-流量2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="188" parent="29" name="be_data_3">
+        <comment>前-流量3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="189" parent="29" name="be_data_mis">
+        <comment>前-误差</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="190" parent="29" name="be_is_adjust">
+        <comment>前-是否调整</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <column id="191" parent="29" name="af_data_set">
+        <comment>后-设定流量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="192" parent="29" name="af_data_1">
+        <comment>后-流量1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="193" parent="29" name="af_data_2">
+        <comment>后-流量2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="194" parent="29" name="af_data_3">
+        <comment>后-流量3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="195" parent="29" name="af_data_mis">
+        <comment>后-误差</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="196" parent="29" name="af_is_pass">
+        <comment>后-是否符合</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <key id="197" parent="29" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="198" parent="30" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="199" parent="30" name="cons_name">
+        <comment>工地名称</comment>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="200" parent="30" name="dev_name">
+        <comment>仪器名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="201" parent="30" name="dep_name">
+        <comment>使用单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="202" parent="30" name="stat_bjh">
+        <comment>工程报建号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="203" parent="30" name="dev_no">
+        <comment>仪器编号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="204" parent="30" name="dt_cali">
+        <comment>校准时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="205" parent="30" name="check_dep">
+        <comment>检查单位名称</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="206" parent="30" name="check_user">
+        <comment>检查人</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="207" parent="30" name="dt_check">
+        <comment>检查日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="208" parent="30" name="be_data_zero">
+        <comment>校零-零值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="209" parent="30" name="be_data_1">
+        <comment>校零-实测1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="210" parent="30" name="be_data_2">
+        <comment>校零-实测2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="211" parent="30" name="be_data_3">
+        <comment>校零-实测3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="212" parent="30" name="be_data">
+        <comment>校零</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="213" parent="30" name="be_is_qual">
+        <comment>校零-是否合格</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <column id="214" parent="30" name="af_data_span">
+        <comment>校标-跨度值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="215" parent="30" name="af_data_1">
+        <comment>校标-实测1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="216" parent="30" name="af_data_2">
+        <comment>校标-实测2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="217" parent="30" name="af_data_3">
+        <comment>校标-实测3</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="218" parent="30" name="af_data">
+        <comment>校标</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="219" parent="30" name="af_is_qual">
+        <comment>校标-是否合格</comment>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <key id="220" parent="30" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="221" parent="31" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="222" parent="31" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="223" parent="32" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="224" parent="32" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="225" parent="33" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="226" parent="33" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="227" parent="34" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="228" parent="34" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="229" parent="35" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="230" parent="35" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="231" parent="36" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="232" parent="36" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="233" parent="37" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="234" parent="37" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="235" parent="38" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="236" parent="38" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="237" parent="39" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="238" parent="39" name="form_noise_id">
+        <comment>噪声校准基础表</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="239" parent="39" name="dt">
+        <comment>校准日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="240" parent="39" name="data_1">
+        <comment>校准值1</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="241" parent="39" name="data_2">
+        <comment>校准值2</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="242" parent="39" name="data_mis">
+        <comment>误差</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <key id="243" parent="39" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="244" parent="40" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="245" parent="40" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="246" parent="41" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="247" parent="41" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="248" parent="42" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="249" parent="42" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="250" parent="43" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="251" parent="43" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="252" parent="44" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="253" parent="44" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="254" parent="45" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="255" parent="45" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="256" parent="46" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="257" parent="46" name="user_id">
+        <comment>登录用户</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="258" parent="46" name="dt">
+        <comment>登录日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="259" parent="46" name="ip">
+        <comment>IP地址</comment>
+        <data-type>bigint(4)|0</data-type>
+      </column>
+      <column id="260" parent="46" name="browser">
+        <comment>浏览器</comment>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="261" parent="46" name="fk_log_login_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="262" parent="46" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="263" parent="46" name="fk_log_login_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="264" parent="47" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="265" parent="47" name="user_id">
+        <comment>操作人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="266" parent="47" name="dt">
+        <comment>操作日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="267" parent="47" name="type">
+        <comment>操作类型</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="268" parent="47" name="table_id">
+        <comment>数据表</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="269" parent="47" name="table_name">
+        <comment>数据表说明</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="270" parent="47" name="comment">
+        <comment>操作说明</comment>
+        <data-type>varchar(300)|0</data-type>
+      </column>
+      <index id="271" parent="47" name="fk_log_oper_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="272" parent="47" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="273" parent="47" name="fk_log_oper_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="274" parent="48" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="275" parent="48" name="log_id">
+        <comment>日志id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="276" parent="48" name="tb_key">
+        <comment>表字段</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="277" parent="48" name="tb_value">
+        <comment>原始值</comment>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="278" parent="48" name="tb_value_cur">
+        <comment>改后值</comment>
+        <data-type>text|0</data-type>
+      </column>
+      <index id="279" parent="48" name="fk_log_oper_cont_log">
+        <columns>log_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="280" parent="48" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="281" parent="48" name="fk_log_oper_cont_log">
+        <columns>log_id</columns>
+        <ref-key>~.log_oper.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="282" parent="49" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="283" parent="49" name="user_id">
+        <comment>操作人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="284" parent="49" name="dt">
+        <comment>操作日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="285" parent="49" name="url">
+        <comment>链接</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <key id="286" parent="49" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="287" parent="50" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="288" parent="50" name="val">
+        <comment>状态值</comment>
+        <data-type>tinyint(2)|0</data-type>
+      </column>
+      <column id="289" parent="50" name="name">
+        <comment>状态名称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="290" parent="50" name="color">
+        <comment>状态颜色</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="291" parent="50" name="data_start">
+        <comment>起始值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="292" parent="50" name="data_end">
+        <comment>结束值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <key id="293" parent="50" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="294" parent="51" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="295" parent="51" name="actor_name">
+        <comment>角色名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="296" parent="51" name="actor_desc">
+        <comment>角色描述</comment>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="297" parent="51" name="name">
+        <comment>acegi规则：ROLE_1</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <key id="298" parent="51" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="299" parent="52" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="300" parent="52" name="actor_id">
+        <comment>角色id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="301" parent="52" name="node_id">
+        <comment>节点id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="302" parent="52" name="state">
+        <comment>节点权限：1-编辑；2-浏览</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="303" parent="52" name="fk_priv_actor_nodes_actor">
+        <columns>actor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="304" parent="52" name="fk_priv_actor_nodes_node">
+        <columns>node_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="305" parent="52" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="306" parent="52" name="fk_priv_actor_nodes_actor">
+        <columns>actor_id</columns>
+        <ref-key>~.priv_actor.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="307" parent="52" name="fk_priv_actor_nodes_node">
+        <columns>node_id</columns>
+        <ref-key>~.tree_node.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <column id="308" parent="53" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="309" parent="53" name="user_id">
+        <comment>用户id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="310" parent="53" name="actor_id">
+        <comment>角色id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="311" parent="53" name="fk_priv_actor_user_actor">
+        <columns>actor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="312" parent="53" name="fk_priv_actor_user_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="313" parent="53" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="314" parent="53" name="fk_priv_actor_user_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="315" parent="53" name="fk_priv_actor_user_actor">
+        <columns>actor_id</columns>
+        <ref-key>~.tree_node.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="316" parent="54" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="317" parent="54" name="StatCode">
+        <comment>监测点编号</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="318" parent="54" name="TP">
+        <comment>颗粒物浓度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="319" parent="54" name="Db">
+        <comment>噪声值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="320" parent="54" name="DataTime">
+        <comment>数据时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="321" parent="54" name="WindSpeed">
+        <comment>风速</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="322" parent="54" name="Rain">
+        <comment>降雨量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="323" parent="54" name="WindDirection">
+        <comment>风向</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="324" parent="54" name="Temperature">
+        <comment>温度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="325" parent="54" name="Humidity">
+        <comment>湿度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="326" parent="54" name="AirPressure">
+        <comment>气压</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="327" parent="54" name="DataStatus">
+        <comment>颗粒物标识符</comment>
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="328" parent="54" name="alatm_type">
+        <comment>1：超标 2：趋势</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="329" parent="54" name="alarm_id">
+        <comment>reg_alarm_over</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <key id="330" parent="54" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="331" parent="55" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="332" parent="55" name="reg_param_id">
+        <comment>参数Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="333" parent="55" name="val">
+        <comment>推送值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="334" parent="55" name="dt">
+        <comment>推送时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="335" parent="55" name="push_type">
+        <comment>推送对象</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="336" parent="55" name="push_data">
+        <comment>推送内容</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="337" parent="55" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="338" parent="56" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="339" parent="56" name="StatCode">
+        <comment>监测点编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="340" parent="56" name="TP">
+        <comment>颗粒物浓度</comment>
+        <mandatory>1</mandatory>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="341" parent="56" name="Db">
+        <comment>噪声值</comment>
+        <mandatory>1</mandatory>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="342" parent="56" name="DataTime">
+        <comment>时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="343" parent="56" name="WindSpeed">
+        <comment>风速</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="344" parent="56" name="Rain">
+        <comment>降雨量</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="345" parent="56" name="WindDirection">
+        <comment>风向</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="346" parent="56" name="Temperature">
+        <comment>温度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="347" parent="56" name="Humidity">
+        <comment>湿度</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="348" parent="56" name="AirPressure">
+        <comment>气压</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="349" parent="56" name="DataStatus">
+        <comment>颗粒物标识符</comment>
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="350" parent="56" name="status">
+        <comment>数据标识符</comment>
+        <data-type>varchar(14)|0</data-type>
+      </column>
+      <key id="351" parent="56" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="352" parent="57" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="353" parent="57" name="user_id">
+        <comment>操作人</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(150)|0</data-type>
+      </column>
+      <column id="354" parent="57" name="dt">
+        <comment>备份日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="355" parent="57" name="comment">
+        <comment>备份说明</comment>
+        <data-type>varchar(500)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="356" parent="57" name="data_type">
+        <comment>备份类型</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="357" parent="57" name="data_size">
+        <comment>备份容量</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <index id="358" parent="57" name="fk_record_data_backup_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="359" parent="57" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="360" parent="57" name="fk_record_data_backup_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="361" parent="58" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="362" parent="58" name="user_id">
+        <comment>操作人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="363" parent="58" name="dt">
+        <comment>导入日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="364" parent="58" name="dt_last">
+        <comment>操作时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="365" parent="58" name="file_type">
+        <comment>文件类型</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="366" parent="58" name="state">
+        <comment>导入状态</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="367" parent="58" name="comment">
+        <comment>操作说明</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <index id="368" parent="58" name="fk_record_data_import_user">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="369" parent="58" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="370" parent="58" name="fk_record_data_import_user">
+        <columns>user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="371" parent="59" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="372" parent="59" name="user_id">
+        <comment>调试人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="373" parent="59" name="dt_start">
+        <comment>开始时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="374" parent="59" name="dt_end">
+        <comment>结束时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="375" parent="59" name="debug_note">
+        <comment>调试原因</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <column id="376" parent="59" name="debug_result">
+        <comment>调试结果</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <column id="377" parent="59" name="debug_type">
+        <comment>1:数据调试 2：系统调试</comment>
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <key id="378" parent="59" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="379" parent="60" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="380" parent="60" name="camera_id">
+        <comment>摄像头id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="381" parent="60" name="alarm_id">
+        <comment>报警数据</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="382" parent="60" name="dt">
+        <comment>更新日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="383" parent="60" name="path">
+        <comment>音频路径</comment>
+        <data-type>varchar(200)|0</data-type>
+      </column>
+      <column id="384" parent="60" name="type">
+        <comment>1:自动 2:手动</comment>
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <index id="385" parent="60" name="fk_record_noise_alarm">
+        <columns>alarm_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="386" parent="60" name="fk_record_noise_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="387" parent="60" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="388" parent="60" name="fk_record_noise_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="389" parent="60" name="fk_record_noise_alarm">
+        <columns>alarm_id</columns>
+        <ref-key>~.record_alarm.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="390" parent="61" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="391" parent="61" name="reg_id">
+        <comment>设备Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="392" parent="61" name="dt_start">
+        <comment>开始离线</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="393" parent="61" name="dt_end">
+        <comment>结束离线</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="394" parent="61" name="comment">
+        <comment>说明</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <index id="395" parent="61" name="fk_record_offline_reg">
+        <columns>reg_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="396" parent="61" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="397" parent="61" name="fk_record_offline_reg">
+        <columns>reg_id</columns>
+        <ref-key>~.reg_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="398" parent="62" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="399" parent="62" name="camera_id">
+        <comment>摄像头Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="400" parent="62" name="alarm_id">
+        <comment>报警记录</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="401" parent="62" name="dt">
+        <comment>更新日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="402" parent="62" name="path">
+        <comment>图片路径</comment>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="403" parent="62" name="type">
+        <comment>1:自动 2:手动</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="404" parent="62" name="fk_record_photo_alarm">
+        <columns>alarm_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="405" parent="62" name="fk_record_photo_camera">
+        <columns>camera_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="406" parent="62" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="407" parent="62" name="fk_record_photo_camera">
+        <columns>camera_id</columns>
+        <ref-key>~.camera_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="408" parent="62" name="fk_record_photo_alarm">
+        <columns>alarm_id</columns>
+        <ref-key>~.record_alarm.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="409" parent="63" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="410" parent="63" name="reg_param_id">
+        <comment>参数id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="411" parent="63" name="excep_min">
+        <comment>报警下限</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="412" parent="63" name="excep_max">
+        <comment>报警上限</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="413" parent="63" name="excep_return">
+        <comment>门限回差值</comment>
+        <data-type>float|0</data-type>
+      </column>
+      <column id="414" parent="63" name="dt_start">
+        <comment>开始时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="415" parent="63" name="dt_end">
+        <comment>结束时间</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="416" parent="63" name="dt_month">
+        <comment>月份</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <index id="417" parent="63" name="fk_reg_alarm_over_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="418" parent="63" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="419" parent="63" name="fk_reg_alarm_over_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="420" parent="64" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="421" parent="64" name="reg_param_id">
+        <comment>报警参数</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="422" parent="64" name="fk_reg_alarm_trend_param">
+        <columns>reg_param_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="423" parent="64" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="424" parent="64" name="fk_reg_alarm_trend_param">
+        <columns>reg_param_id</columns>
+        <ref-key>~.reg_param.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="425" parent="65" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="426" parent="65" name="StatCode">
+        <comment>监测点编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="427" parent="65" name="DevCode">
+        <comment>设备编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="428" parent="65" name="StartTime">
+        <comment>安装时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="429" parent="65" name="PreEndTime">
+        <comment>预计结束时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="430" parent="65" name="EndTime">
+        <comment>实际结束时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="431" parent="65" name="DevStatus">
+        <comment>设备是否启动</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="432" parent="65" name="VideoURL">
+        <comment>视频地址</comment>
+        <data-type>varchar(200)|0</data-type>
+      </column>
+      <column id="433" parent="65" name="address">
+        <comment>所处方位</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="434" parent="65" name="longitude">
+        <comment>经度</comment>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="435" parent="65" name="latitude">
+        <comment>纬度</comment>
+        <data-type>decimal(9,6)|0</data-type>
+      </column>
+      <column id="436" parent="65" name="period">
+        <comment>采样周期</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="437" parent="65" name="fk_reg_info_stat">
+        <columns>StatCode</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="438" parent="65" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="439" parent="65" name="fk_reg_info_stat">
+        <columns>StatCode</columns>
+        <ref-key>~.dep_cons.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="440" parent="66" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="441" parent="66" name="reg_id">
+        <comment>设备Id</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="442" parent="66" name="para_name">
+        <comment>参数名</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="443" parent="66" name="para_type_id">
+        <comment>参数类型</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="444" parent="66" name="unit_type_id">
+        <comment>参数单位</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="445" parent="66" name="memo_type">
+        <comment>存储类型</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="446" parent="66" name="devId">
+        <comment>0~256</comment>
+        <data-type>tinyint(3) unsigned|0</data-type>
+      </column>
+      <column id="447" parent="66" name="offset">
+        <comment>0~65535</comment>
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <index id="448" parent="66" name="fk_reg_param_para">
+        <columns>para_type_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="449" parent="66" name="fk_reg_param_reg">
+        <columns>reg_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="450" parent="66" name="fk_reg_param_unit">
+        <columns>unit_type_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="451" parent="66" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="452" parent="66" name="fk_reg_param_reg">
+        <columns>reg_id</columns>
+        <ref-key>~.reg_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="453" parent="66" name="fk_reg_param_para">
+        <columns>para_type_id</columns>
+        <ref-key>~.d_type.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="454" parent="66" name="fk_reg_param_unit">
+        <columns>unit_type_id</columns>
+        <ref-key>~.d_type.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="455" parent="67" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="456" parent="67" name="name">
+        <comment>节点名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="457" parent="67" name="parent_id">
+        <comment>父节点Id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="458" parent="67" name="type">
+        <comment>节点类型</comment>
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <column id="459" parent="67" name="url">
+        <comment>节点链接</comment>
+        <data-type>varchar(200)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="460" parent="67" name="title">
+        <comment>节点提示信息</comment>
+        <data-type>varchar(200)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="461" parent="67" name="sort">
+        <comment>排序</comment>
+        <data-type>tinyint(20)|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="462" parent="67" name="icon">
+        <comment>节点图标</comment>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="463" parent="67" name="comment">
+        <comment>节点说明</comment>
+        <data-type>varchar(500)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="464" parent="67" name="fk_tree_nodes_parent">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="465" parent="67" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="466" parent="67" name="fk_tree_nodes_parent">
+        <columns>parent_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <column id="467" parent="68" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="468" parent="68" name="mobilephone">
+        <comment>手机</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="469" parent="68" name="telephone">
+        <comment>固定电话</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="470" parent="68" name="email">
+        <comment>邮箱</comment>
+        <data-type>varchar(60)|0</data-type>
+      </column>
+      <column id="471" parent="68" name="qq">
+        <comment>QQ</comment>
+        <data-type>varchar(12)|0</data-type>
+      </column>
+      <column id="472" parent="68" name="pic_head">
+        <comment>头像地址</comment>
+        <data-type>varchar(200)|0</data-type>
+      </column>
+      <column id="473" parent="68" name="sex">
+        <comment>性别</comment>
+        <data-type>tinyint(3)|0</data-type>
+      </column>
+      <column id="474" parent="68" name="id_card">
+        <comment>身份证</comment>
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="475" parent="68" name="address">
+        <comment>居住地</comment>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <key id="476" parent="68" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="477" parent="69" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="478" parent="69" name="login_name">
+        <comment>登录名</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="479" parent="69" name="login_pwd">
+        <comment>登录密码</comment>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="480" parent="69" name="user_name">
+        <comment>用户名</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="481" parent="69" name="isUse">
+        <comment>账号状态</comment>
+        <data-type>tinyint(3)|0</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="482" parent="69" name="detail_id">
+        <comment>详细信息</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="483" parent="69" name="fk_user_info_detail">
+        <columns>detail_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="484" parent="69" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="485" parent="69" name="fk_user_info_detail">
+        <columns>detail_id</columns>
+        <ref-key>~.alarm_push.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="486" parent="70" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="487" parent="70" name="charge_user_id">
+        <comment>负责人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="488" parent="70" name="appr_user_id">
+        <comment>审批人</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="489" parent="70" name="version">
+        <comment>版本号</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="490" parent="70" name="dt">
+        <comment>更新日期</comment>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="491" parent="70" name="comment">
+        <comment>版本详情</comment>
+        <data-type>varchar(1000)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <index id="492" parent="70" name="fk_system_about_dutyUser">
+        <columns>charge_user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="493" parent="70" name="fk_version_info_appr">
+        <columns>appr_user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="494" parent="70" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="495" parent="70" name="fk_system_about_dutyUser">
+        <columns>charge_user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="496" parent="70" name="fk_version_info_appr">
+        <columns>appr_user_id</columns>
+        <ref-key>~.user_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+  <data-source name="myDataSource" uuid="2957b615-3faa-4eff-8ef1-0b02c07cdfb4">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

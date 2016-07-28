@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.multipart.maxSize" value="314572800"/>
+    <constant name="struts.multipart.saveDir" value="C:/123"/>
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.action.excludePattern" value="/dwr.*"></constant>
+    <package name="index" extends="json-default" namespace="/">
+        <action name="index" method="logins" class="LoginAction">
+            <result name="success">./main/mains.jsp</result>
+            <result type="redirect" name="error">./login/login.jsp</result>
+        </action>
+    </package>
+    <package name="alarm" extends="json-default" namespace="/alarm">
+        <action name="showRegExceps" method="showRegExceps" class="alarmAction">
+            <result>showRegExceps.jsp</result>
+        </action>
+        <action name="json_excepConditions" method="json_excepConditions" class="alarmAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*, pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_excepConditions" method="query_excepConditions" class="alarmAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*, pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="startThread" method="startThread" class="RegInfoAction">
+        </action>
+    </package>
+    <package name="dType" extends="json-default" namespace="/dType">
+        <action name="checkTypeName" method="checkTypeName" class="DTypeAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="checkEnName" method="checkEnName" class="DTypeAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="showDTypes" method="showDTypes" class="DTypeAction">
+            <result>showDTypes.jsp</result>
+        </action>
+        <action name="json_dtypes" method="json_dtypes" class="DTypeAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailType" method="showDetailType" class="DTypeAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*,rows.*
+                </param>
+            </result>
+        </action>
+        <action name="addDType" method="addDType" class="DTypeAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+                <param name="noCache">true</param>
+                <param name="ignoreHierarchy">false</param>
+                <param name="contentType">text/html</param>
+            </result>
+        </action>
+        <action name="removeDType" method="removeDType" class="DTypeAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="database" extends="json-default" namespace="/database">
+        <action name="showDatabases" method="showDatabases" class="DatabaseAction">
+            <result>showDatabases.jsp</result>
+        </action>
+        <action name="json_datas" method="json_datas" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="backupDatas" method="backupDatas" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="checkData" method="checkData" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="recoverDatas" method="recoverDatas" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="removeData" method="removeData" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="uploadDatas" method="uploadDatas" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="download" method="download" class="DatabaseAction">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="showDataRecovers" method="showDataRecovers" class="DatabaseAction">
+            <result>showDataRecovers.jsp</result>
+        </action>
+        <action name="json_dataRecovers" method="json_dataRecovers" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="ggetBaseState" method="ggetBaseState" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="ajaxSub" method="ajaxSub" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="ajaxGet" method="ajaxGet" class="DatabaseAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="autoBackUpDay" method="autoBackUpDay" class="DatabaseAction">
+        </action>
+        <action name="autoBackUpMonth" method="autoBackUpMonth" class="DatabaseAction">
+        </action>
+    </package>
+    <package name="excel" extends="json-default" namespace="/excel">
+        <action name="download_*" class="ExcelOutAction">
+            <result type="stream" name="success">
+                <param name="contentType">application/octet-stream</param>
+                <!-- 要有相对应的getDownloadFile()方法返回值是 InputStream -->
+                <param name="inputName">{1}</param>
+
+                <param name="contentDisposition">attachment;filename="${fileName}.xls"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="excelMode_*" class="ExcelOutAction">
+            <result type="stream" name="success">
+                <param name="contentType">application/octet-stream</param>
+                <!-- 要有相对应的getDownloadFile()方法返回值是 InputStream -->
+                <param name="inputName">{1}</param>
+                <param name="contentDisposition">attachment;filename="${fileName}.xls"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="*" method="{1}" class="ExcelInAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag,map.*
+                </param>
+            </result>
+        </action>
+        <action name="download" method="download" class="ExcelInAction">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+    </package>
+    <package name="excelOut" extends="json-default" namespace="/dev">
+        <action name="down_*" class="DeviceAction">
+            <result type="stream" name="success">
+                <param name="contentType">application/octet-stream</param>
+                <!-- 要有相对应的getDownloadFile()方法返回值是 InputStream -->
+                <param name="inputName">{1}</param>
+
+                <param name="contentDisposition">attachment;filename="{1}.xls"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+    </package>
+    <package name="main" extends="json-default" namespace="/main">
+        <action name="isalarm" method="alarmed" class="AlarmAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flaged
+                </param>
+            </result>
+        </action>
+        <action name="json_leftTrees" method="json_leftTrees" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="exitLogin" method="exitLogin" class="LoginAction">
+            <result>../exitlogin.jsp</result>
+        </action>
+        <action name="exitLogin11" method="exitLogin" class="LoginAction">
+            <result>updatesuccess.jsp</result>
+        </action>
+        <action name="foot" class="LoginAction" method="showuser">
+            <result>foot.jsp</result>
+        </action>
+        <action name="hide" class="LoginAction" method="hide">
+            <result>hide.jsp</result>
+        </action>
+        <action name="welcome" class="ChartAction" method="welcome">
+            <result>welcome.jsp</result>
+        </action>
+        <action name="json_index" class="ChartAction" method="json_index">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_indexPeriod" class="ChartAction" method="json_indexPeriod">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*
+                </param>
+            </result>
+        </action>
+        <action name="json_top" class="MenuAction" method="json_top">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nav" class="MenuAction" method="json_nav">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="org" extends="json-default" namespace="/org">
+        <action name="showUserInfos" method="showUserInfos" class="UserInfoAction">
+            <result>showUserInfos.jsp</result>
+        </action>
+        <action name="json_userInfos" method="json_userInfos" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_userInfos" method="query_userInfos" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailUserInfo" method="showDetailUserInfo" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="addUserInfo" method="addUserInfo" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="removeUserInfo" method="removeUserInfo" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="checkLoginName" method="checkLoginName" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="showUserInfo" method="showUserInfo" class="UserInfoAction">
+            <result>showUserInfo.jsp</result>
+        </action>
+        <action name="json_userInfo" method="json_userInfo" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="checkPswOld" method="checkPswOld" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="pswEdit" method="pswEdit" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="userDetail" method="userDetail" class="UserInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag,map.*
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="login" extends="json-default" namespace="/login">
+        <action name="logins" method="loginss" class="LoginAction">
+            <result name="success" type="redirect">../main/mains.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="welcome" class="ChartAction" method="mainChart">
+            <result>welcome.jsp</result>
+        </action>
+        <action name="checkLogin" class="LoginAction" method="checkLogin">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="password" class="LoginAction" method="password">
+            <result name="success">password.jsp</result>
+        </action>
+        <action name="updatepassword" class="LoginAction" method="updatepassword">
+            <result name="success" type="redirect">../main/exitLogin11.action</result>
+            <result name="error">password.jsp</result>
+        </action>
+    </package>
+    <package name="chart" extends="json-default" namespace="/chart">
+        <action name="json_regIds" method="json_regIds" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_regIds_" method="json_regIds_" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_regIds_contr" method="json_regIds_contr" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowChartInit" method="json_nowChartInit" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowChartInit_contr" method="json_nowChartInit_contr" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowColumnInit" method="json_nowColumnInit" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*, map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowColumn" method="json_nowColumn" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowStateInit" method="json_nowStateInit" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowState" method="json_nowState" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowTable" method="json_nowTable" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowChartInit1" method="json_nowChartInit1" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowCharts" method="json_nowCharts" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowCharts_contr" method="json_nowCharts_contr" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_hisLine" method="json_hisLine" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    linkedMap.*
+                </param>
+            </result>
+        </action>
+        <action name="json_hisColumn" method="json_hisColumn" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    linkedMap.*
+                </param>
+            </result>
+        </action>
+        <action name="json_hisCharts_contr" method="json_hisCharts_contr" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_picOut" method="json_picOut" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*
+                </param>
+            </result>
+        </action>
+        <action name="testModbus" method="testModbus" class="ChartAction">
+        </action>
+        <action name="showCharts" method="showCharts" class="ChartAction">
+            <result>showCharts.jsp</result>
+        </action>
+        <action name="synchDtBet" method="synchDtBet" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="addExperInfo" method="addExperInfo" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_nowChart" method="json_nowChart" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="nowChart" method="nowChart" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="nowChart1" method="nowChart1" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="showNowTable" class="ChartAction" method="showNowTable">
+            <result>showNowTable.jsp</result>
+        </action>
+        <action name="showHisTable" class="ChartAction" method="showHisTable">
+            <result>showHisTable.jsp</result>
+        </action>
+        <action name="json_nowTables" class="ChartAction" method="json_nowTables">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_hisTable" class="ChartAction" method="json_hisTable">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_hisTableInit" class="ChartAction" method="json_hisTableInit">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="exportNowChart" class="ExportingAction" method="exportNowChart">
+        </action>
+        <action name="exportNowState" class="ExportingAction" method="exportNowState">
+        </action>
+        <action name="exportHisCharts" class="ExportingAction" method="exportHisCharts">
+        </action>
+        <action name="downloadNowContr" class="ExportingAction" method="downloadNowContr">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="downloadChartWord" class="ExportingAction" method="downloadChartWord">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="downloadHisLine" class="ExportingAction" method="downloadHisLine">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="downloadHisColumn" class="ExportingAction" method="downloadHisColumn">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="downloadHisContr" class="ExportingAction" method="downloadHisContr">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="downloadNowState" class="ExportingAction" method="downloadNowState">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="json_initContrast" class="ChartAction" method="json_initContrast">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="showNowDatas" class="ChartAction" method="showNowDatas">
+            <result>showNowDatas.jsp</result>
+        </action>
+        <action name="json_mapDatas" class="ChartAction" method="json_mapDatas">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="regInfo" extends="json-default" namespace="/regInfo">
+        <action name="showRegInfos" method="showRegInfos" class="RegInfoAction">
+            <result>showRegInfos.jsp</result>
+        </action>
+        <action name="json_regInfos" method="json_regInfos" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="addRegInfo" method="addRegInfo" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*,flag
+                </param>
+            </result>
+        </action>
+        <action name="removeRegInfo" method="removeRegInfo" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="checkAddrOff" method="checkAddrOff" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="sortRegInfo" method="sortRegInfo" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="json_regControl" method="json_regControl" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="json_switchState" method="json_switchState" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="addRegSwitch" method="addRegSwitch" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="showSwitchRecords" method="showSwitchRecords" class="RegInfoAction">
+            <result>showSwitchRecords.jsp</result>
+        </action>
+        <action name="json_switchRecords" method="json_switchRecords" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_switchRecords" method="query_switchRecords" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="json_switchRecordQuey" method="json_switchRecordQuey" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="testData" method="testData" class="RegInfoAction"></action>
+        <action name="saveRegMap" method="saveRegMap" class="RegInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*, flag
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="serialInfo" extends="json-default" namespace="/serialInfo">
+        <action name="showSerialInfos" method="showSerialInfos" class="SerialInfoAction">
+            <result>showSerialInfos.jsp</result>
+        </action>
+        <action name="json_serialInfos" method="json_serialInfos" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_serialInfos" method="query_serialInfos" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*,map.*
+                </param>
+            </result>
+        </action>
+        <action name="addSerialInfo" method="addSerialInfo" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*,flag
+                </param>
+            </result>
+        </action>
+        <action name="showDetailSerialInfo" method="showDetailSerialInfo" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="removeSerialInfo" method="removeSerialInfo" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="checkSerialName" method="checkSerialName" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="json_serialRegInfos" method="json_serialRegInfos" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="daqState" method="daqState" class="SerialInfoAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="systemComu" extends="json-default" namespace="/systemComu">
+        <action name="showSystemComus" method="showSystemComus" class="SystemComuAction">
+            <result>showSystemComus.jsp</result>
+        </action>
+        <action name="json_systemComus" method="json_systemComus" class="SystemComuAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailSystemComu" method="showDetailSystemComu" class="SystemComuAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="checkComuType" method="checkComuType" class="SystemComuAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="addSystemComu" method="addSystemComu" class="SystemComuAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*,flag
+                </param>
+            </result>
+        </action>
+        <action name="changeComuState" method="changeComuState" class="SystemComuAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="node" extends="json-default" namespace="/node">
+        <action name="showNodes" method="showNodes" class="RolesAction">
+            <result>showNodes.jsp</result>
+        </action>
+        <action name="json_nodes" method="json_nodes" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*
+                </param>
+            </result>
+        </action>
+        <action name="addNode" method="addNode" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag, map.*
+                </param>
+            </result>
+        </action>
+        <action name="removeNode" method="removeNode" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="showRoles" method="showRoles" class="RolesAction">
+            <result>showRoles.jsp</result>
+        </action>
+        <action name="json_roles" method="json_roles" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_roles" method="query_roles" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailRole" method="showDetailRole" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="detailUsers" method="detailUsers" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*
+                </param>
+            </result>
+        </action>
+        <action name="detailNodes" method="detailNodes" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,rows1.*,prNodes
+                </param>
+            </result>
+        </action>
+        <action name="ggetRoleUsers" method="ggetRoleUsers" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,rows1.*
+                </param>
+            </result>
+        </action>
+        <action name="ggetRoleNodes" method="ggetRoleNodes" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,rows1.*
+                </param>
+            </result>
+        </action>
+        <action name="checkActor" method="checkActor" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="checkNode" method="checkNode" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="bindRoleUsers" method="bindRoleUsers" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="bindRoleNodes" method="bindRoleNodes" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="addRole" method="addRole" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    actorId,map.*
+                </param>
+            </result>
+        </action>
+        <action name="removeRole" method="removeRole" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="json_mainNodes" method="json_mainNodes" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*
+                </param>
+            </result>
+        </action>
+        <action name="sortNode" method="sortNode" class="RolesAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="system" extends="json-default" namespace="/system">
+        <action name="showSystemAbouts" method="showSystemAbouts" class="SystemAction">
+            <result>showSystemAbouts.jsp</result>
+        </action>
+        <action name="json_systemAbouts" method="json_systemAbouts" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_systemAbouts" method="query_systemAbouts" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailSystemAbout" method="showDetailSystemAbout" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="checkVersion" method="checkVersion" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="addSystemAbout" method="addSystemAbout" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*,flag
+                </param>
+            </result>
+        </action>
+        <action name="json_curSystemAbout" method="json_curSystemAbout" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="download" method="download" class="SystemAction">
+            <param name="contentType">filename</param>
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">input</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="showSystemStates" method="showSystemStates" class="SystemAction">
+            <result>showSystemStates.jsp</result>
+        </action>
+        <action name="json_systemStates" method="json_systemStates" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="json_systemScript" method="json_systemScript" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="json_runData" method="json_runData" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="initDatas" method="initDatas" class="SystemAction"></action>
+        <action name="initRegInfos" method="initRegInfos" class="SystemAction"></action>
+        <action name="initRegs" method="initRegs" class="SystemAction"></action>
+        <action name="json_helpCommit" method="json_helpCommit" class="SystemAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="debug" extends="json-default" namespace="/debug">
+        <action name="showDataDebugs" method="showDataDebugs" class="DebugAction">
+            <result>showDataDebugs.jsp</result>
+        </action>
+        <action name="json_dataDebugs" method="json_dataDebugs" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_dataDebugs" method="query_dataDebugs" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailDataDebug" method="showDetailDataDebug" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="addDataDebug" method="addDataDebug" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*,flag
+                </param>
+            </result>
+        </action>
+        <action name="removeDataDebug" method="removeDataDebug" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="showDevDebugs" method="showDevDebugs" class="DebugAction">
+            <result>showDevDebugs.jsp</result>
+        </action>
+        <action name="json_devDebugs" method="json_devDebugs" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_devDebugs" method="query_devDebugs" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailDevDebug" method="showDetailDevDebug" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="addDevDebug" method="addDevDebug" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*,flag
+                </param>
+            </result>
+        </action>
+        <action name="removeDevDebug" method="removeDevDebug" class="DebugAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="dep" extends="json-default" namespace="/dep">
+        <action name="showMyDep" method="showMyDep" class="UserDepAction">
+            <result>
+                showMyDep.jsp
+            </result>
+        </action>
+        <action name="editMyDeps" method="editMyDep" class="UserDepAction">
+            <result>
+                editMyDeps.jsp
+            </result>
+        </action>
+        <action name="editMyDep" method="editMyDep" class="UserDepAction">
+            <result>
+                editMyDep.jsp
+            </result>
+        </action>
+        <action name="json_myUserDep" method="json_myUserDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="updateMyUserDep" method="updateMyUserDep" class="UserDepAction">
+            <!--<result type="redirect">
+                showMyDep.action
+            </result>-->
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="showUserDeps" method="showUserDeps" class="UserDepAction">
+            <result name="success">showUserDeps.jsp</result>
+        </action>
+        <action name="json_userDeps" method="json_userDeps" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailUserDep" method="showDetailUserDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="checkUserDep" method="checkUserDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="checkLogin" method="checkLogin" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="addUserDep" method="addUserDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="query_userDeps" method="query_userDeps" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="removeUserDep" method="removeUserDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="showDeps" method="showDeps" class="UserDepAction">
+            <result name="success">showDeps.jsp</result>
+        </action>
+        <action name="json_deps" method="json_deps" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="showDetailDep" method="showDetailDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+        <action name="checkDep" method="checkDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    flag
+                </param>
+            </result>
+        </action>
+        <action name="addDep" method="addDep" class="UserDepAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="logs" extends="json-default" namespace="/logs">
+        <action name="showLogins" method="showLogins" class="LogsAction">
+            <result name="success">showLogins.jsp</result>
+        </action>
+        <action name="json_logins" method="json_logins" class="LogsAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+        <action name="query_logins" method="query_logins" class="LogsAction">
+            <result type="json">
+                <param name="includeProperties">
+                    rows.*,pageBean.*
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="exper" extends="json-default" namespace="/exper">
+        <action name="showExperCharts" method="showExperCharts" class="ChartAction">
+            <result name="success">showExperCharts.jsp</result>
+        </action>
+        <action name="json_experChart" method="json_experChart" class="ChartAction">
+            <result type="json">
+                <param name="includeProperties">
+                    map.*
+                </param>
+            </result>
+        </action>
+    </package>
+    <package name="video" extends="json-default" namespace="/video">
+        <action name="showMonitors" method="showMonitors" class="MonitorAction">
+            <result name="success">showNowVideo.jsp</result>
+        </action>
+    </package>
+</struts>
