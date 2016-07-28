@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.wnwl.CPN2025.bhh.SystemInfo" table="system_info" catalog="cpn2025db">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="chargeUser" class="com.wnwl.CPN2025.bhh.UserInfo" fetch="select">
+            <column name="charge_user_id">
+                <comment>负责人</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="50">
+                <comment>系统名称</comment>
+            </column>
+        </property>
+        <property name="abbr" type="string">
+            <column name="abbr" length="20">
+                <comment>系统简称</comment>
+            </column>
+        </property>
+        <property name="version" type="string">
+            <column name="version" length="20">
+                <comment>版本信息</comment>
+            </column>
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="500">
+                <comment>说明</comment>
+            </column>
+        </property>
+        <property name="dt" type="int">
+            <column name="dt" length="10">
+                <comment>更新日期</comment>
+            </column>
+        </property>
+        <property name="copyright" type="string">
+            <column name="copyright" length="50">
+                <comment>版权信息</comment>
+            </column>
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="20">
+                <comment>传真</comment>
+            </column>
+        </property>
+        <property name="telephone" type="string">
+            <column name="telephone" length="20">
+                <comment>固定电话</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50">
+                <comment>邮箱</comment>
+            </column>
+        </property>
+        <property name="mobilephone" type="string">
+            <column name="mobilephone" length="20">
+                <comment>手机</comment>
+            </column>
+        </property>
+        <property name="web" type="string">
+            <column name="web" length="50">
+                <comment>网址</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
